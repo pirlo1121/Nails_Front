@@ -1,0 +1,100 @@
+.requerimientos-principal{
+    background-color: #FFF6F4 ;
+    background-image:  url(https://themes.dev.tiendup.co/pennynail/assets/img/line_pattern.png);
+    background-repeat: repeat;
+    background-size: 40px;
+    background-position: 0 10px;
+    box-shadow: 0 0 0 10px #fff inset;
+    background-attachment: fixed;
+    backface-visibility: hidden;
+    text-align: center; 
+}
+.requerimientos-outter{
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;   
+    text-align: center;
+}
+.requerimientos-inner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;              
+    text-align: center;             
+    margin-left: 0;
+    margin-right: 0;                                                                                                                                                                                                                                                                                          
+}
+.requerimientos-title{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.requerimientos-description{
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+.banner-taller-titulo, p, strong, .banner-yaller-btn{margin-left: 5%;}
+.banner-taller-titulo{
+    font-weight: bold;
+    font-size: xx-large;
+    line-height: 1.2;
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 1rem;
+}
+.banner-taller-outter {
+    display: flex;
+    /* Alinear los elementos horizontalmente */
+    align-items: center;
+    background: #ffdcdc;
+    background-image: url(https://themes.dev.tiendup.co/pennynail/assets/img/line_pattern.png);
+  }
+  
+  .banner-taller-img-outter {
+    /* Colocar la imagen a la derecha usando flex-grow */
+    flex-grow: 1;
+    /* Alineación a la derecha */
+    text-align: right;
+  }
+  
+  .banner-taller-img-inner img {
+    max-width: 100%; /* Asegurar que la imagen no sobrepase su contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+  }
+  .banner-taller-btn{
+    background-color: #f27e93;
+    border: 1px solid transparent;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 0 30px;
+    display: inline-block;
+    line-height: 38px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 5rem;
+  }
+
+  @media (max-width: 768px) {
+    .banner-taller-btn {
+        margin-top: 2rem;
+    }
+
+    .banner-taller-outter {
+        padding: 10px; /* Ajuste de espaciado para dispositivos móviles */
+    }
+    .banner-taller-img-inner img {
+        display: none;
+    }
+
+}

@@ -1,0 +1,23 @@
+.agenda-google {
+    min-height: 40rem;
+    display: flex;
+}
+.mensaje-agenda{
+        display: flex;
+        justify-content: center;
+        background-color: #f27e938e;
+        margin: 1rem;
+        height: 7rem;
+        align-items: center;
+        background-image: url(../../../assets/images/patron.webp);
+        background-repeat: repeat;
+}
+.mensaje-agenda-outter{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    
+}
+.contenedor-agenda-outter{
+    min-height: 40rem;
+}

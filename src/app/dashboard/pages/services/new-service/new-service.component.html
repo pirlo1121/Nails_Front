@@ -1,0 +1,109 @@
+<h2>Formulario de Nuevo Servicio</h2>
+<form
+  class="form form-service"
+  [formGroup]="serviceForm"
+  (ngSubmit)="createService()"
+  autocomplete="off"
+>
+  <h2>Servicios</h2>
+  <p class=>Registra nuevos servicios. Diligencia cada uno de los campos según sean requeridos.</p>
+  <div class="field">
+    <label for="name">Titulo del servicio</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Titulo del servicio"
+      minlength="3"
+    />
+    <div
+      *ngIf="serviceForm.get( 'name' )?.invalid && ( serviceForm.get( 'name' )?.dirty || serviceForm.get( 'name' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'name' )?.errors?.[ 'required' ]">
+        Nombre de servicio es requerido.
+      </small>
+      <small *ngIf="serviceForm.get( 'name' )?.errors?.[ 'minlength' ]">
+        Nombre de servicio debe tener al menos 3 caracteres.
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="price">Precio del servicio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="number"
+      formControlName="price"
+      placeholder="Precio del servicio"
+    />
+    <div
+      *ngIf="serviceForm.get( 'price' )?.invalid && ( serviceForm.get( 'price' )?.dirty || serviceForm.get( 'price' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'price' )?.errors?.[ 'required' ]">
+        Precio del servicio es requerido.
+      </small>
+      <small *ngIf="serviceForm.get( 'price' )?.errors?.[ 'negativeValue' ]">
+        El precio debe ser mayor o igual a cero
+      </small>
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label for="image">Imagen del servicio*</label>
+    <input
+      id="image"
+      class="input-field"
+      type="text"
+      formControlName="urlImage"
+    />
+    <div
+      *ngIf="serviceForm.get( 'urlImage' )?.invalid && ( serviceForm.get( 'urlImage' )?.dirty || serviceForm.get( 'urlImage' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
+        La URL no tiene formato de imagen permitido
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      class="input-field"
+      formControlName="description"
+      placeholder="Descripción del servicio"
+      cols="20"
+      rows="5"
+      minlength="3"
+    ></textarea>
+    <div
+      *ngIf="serviceForm.get( 'description' )?.invalid && ( serviceForm.get( 'description' )?.dirty || serviceForm.get( 'description' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'description' )?.errors?.[ 'invalidDescriptionLength' ]">
+        La descripción debe tener una longitud de entre 3 a 140 caracteres
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <button
+      class="btn btn-primary button"
+      type="submit"
+      [disabled]="this.serviceForm.invalid"
+    >Crear servicio</button>
+  </div>
+
+  <!-- <div class="errors">
+    <h3 class="title-errors">Errors</h3>
+    <pre class="error">name {{ serviceForm.get( 'name' )?.errors | json }}</pre>
+    <pre class="error">price {{ serviceForm.get( 'price' )?.errors | json }}</pre>
+    <pre class="error">quantity {{ serviceForm.get( 'quantity' )?.errors | json }}</pre>
+    <pre class="error">urlImage {{ serviceForm.get( 'urlImage' )?.errors | json }}</pre>
+    <pre class="error">category {{ serviceForm.get( 'category' )?.errors | json }}</pre>
+    <pre class="error">description {{ serviceForm.get( 'description' )?.errors | json }}</pre>
+  </div> -->
+</form>

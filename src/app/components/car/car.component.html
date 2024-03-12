@@ -1,0 +1,21 @@
+<br><br><br> <br><br>
+
+<div class="carrito-container">
+  <h2> <b> listado de productos </b> </h2>
+  <div class="carrito-details"
+  *ngFor="let carrito of carrito"
+  >
+    <p><b> Producto: </b>{{ carrito.name }}</p>
+    <p class="card-price"> <b> Cantidad: </b> {{ carrito.count}}</p>
+    <p class="card-price"><b> Precio: </b>${{ carrito.price}}.000</p>
+    <br> <hr><br>
+  </div>
+  <p> Precio total: {{ total }}.000 </p>
+  <div class="footer">
+    <button class="close-button" (click)="closeCariito()">close</button>
+    <button class="pagar-button">Pagar</button>
+    <button class="pagar-button" (click)="cleanCarrito()"> Clean</button>
+  </div>
+</div>
+
+

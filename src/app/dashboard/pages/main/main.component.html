@@ -1,0 +1,26 @@
+<section class="main-section">
+<div class="card-main">
+    <div class="card-header">
+        <h2>Bienvenido/a al Dashboard de Administración</h2>
+    </div>
+    <div class="card-body">
+        <p>Encuentra aquí las opciones de administración disponibles actualmente.</p>
+    </div>
+    <div class="card-section">
+        <p>Selecciona la acción que deseas realizar:</p>
+    </div>
+    <div class="card-buttons">
+
+        <a routerLink="/dashboard/products"><button class="button">Administrar Productos Existentes</button></a>
+        <a routerLink="/dashboard/products/new"><button class="button">Añadir Nuevo Producto</button></a>
+        
+        <a routerLink="/dashboard/servicios"><button class="button">Administrar Servicios Existentes</button></a>
+        <a routerLink="/dashboard/servicios/new-service"><button class="button">Crear Nuevo Servicio</button></a>
+        
+        <a routerLink="/dashboard/talleres"><button class="button">Administrar Talleres Existentes</button></a>
+        <a routerLink="/dashboard/talleres/new"><button class="button">Crear Nuevo Taller</button></a>
+        
+    </div>
+</div>
+<router-outlet></router-outlet>
+</section>

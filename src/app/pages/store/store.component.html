@@ -1,0 +1,25 @@
+<div class="container">
+    <app-aside class="aside"></app-aside>
+    <div class="shopping" (click)="opencarrito()">
+      <img  class="carrito-img" src="../../../assets/images/store/carrito.png" >
+      <span class="contador-carrito" *ngIf="contador>=1">{{contador}}</span>
+    </div>
+    <div class="cards">
+        <app-cards
+          class="card"
+          *ngFor="let product of products"
+          [products]="product"
+          (dataProduct)="addProduct( $event )">
+        </app-cards>
+    </div>
+<div>
+<!-- <div class="shopping" (click)="opencarrito()">
+  <img  class="carrito-img" src="../../../assets/images/store/carrito.png">
+</div> -->
+
+<div class="carrito" *ngIf="modal == true">
+  <app-car></app-car>
+</div>
+
+
+

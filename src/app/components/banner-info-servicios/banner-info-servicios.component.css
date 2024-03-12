@@ -1,0 +1,11 @@
+.info-abajo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffdcdc;
+    text-align: center;
+}
+.info-abajo p{
+    margin: 1rem;
+}

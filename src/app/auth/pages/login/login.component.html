@@ -1,0 +1,79 @@
+<br>
+<form
+  class="form form-auth form-login"
+  [formGroup]="loginForm"
+  (ngSubmit)="login()"
+  autocomplete="off"
+>
+  <h2>Login</h2>
+
+  <div class="field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      class="input-field"
+      type="email"
+      formControlName="username"
+      placeholder="Ingrese su Email"
+    />
+    <div
+      *ngIf="loginForm.get( 'email' )?.invalid && ( loginForm.get( 'email' )?.dirty || loginForm.get( 'email' )?.touched )"
+      class="error-message"
+    >
+      <!--
+        loginForm.get( 'email' )?.invalid verifica si el campo de email es inválido.
+        loginForm.get( 'email' )?.dirty comprueba si el campo de email ha sido modificado.
+        loginForm.get( 'email' )?.touched verifica si el campo de email ha sido tocado.
+      -->
+
+      <small *ngIf="loginForm.get( 'email' )?.errors?.[ 'required' ]">
+        Email es requerido.
+      </small>
+      <small *ngIf="loginForm.get( 'email' )?.errors?.[ 'pattern' ]">
+        Por favor, introduzca un email válido.
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="password">Password</label>
+    <input
+      id="password"
+      class="input-field"
+      type="password"
+      formControlName="password"
+      placeholder="Ingrese su Password"
+    />
+    <div
+      *ngIf="loginForm.get( 'password' )?.invalid && ( loginForm.get( 'password' )?.dirty || loginForm.get( 'password' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="loginForm.get( 'password' )?.errors?.[ 'required' ]">
+        Contraseña es requerida.
+      </small>
+      <small
+        *ngIf="loginForm.get( 'password' )?.errors?.[ 'pattern' ]"
+      >
+        La contraseña debe tener al menos 8 caracteres y contener al menos 1 número, 1 mayúscula 1 carácter especial.
+      </small>
+      <small *ngIf="loginForm.get( 'password' )?.errors?.[ 'minlength' ]">
+        La contraseña debe tener al menos 6 caracteres.
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <button
+      class="btn btn-primary button"
+      type="submit"
+      [disabled]="this.loginForm.invalid"
+    >Ingresar</button>
+  </div>
+  <div class="field">
+      <!-- Imprime mensaje -->
+      <div [class]="classMessage">
+        {{ message }}
+      </div>
+    </div>
+
+</form>
+
+

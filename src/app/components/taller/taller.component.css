@@ -1,0 +1,69 @@
+
+.taller {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 2rem;
+}
+.img {
+  flex: 1;
+  margin: 1rem 0;
+}
+
+.img-taller {
+  max-width: 500px;
+  width: 100%;
+  height: 350px;
+  border-radius: 3px;
+}
+
+/* Estilos para la mitad derecha que contiene la información del taller */
+.taller-info {
+  flex: 1;
+  padding: 0 10px; /* Ajusta el relleno según tus necesidades */
+}
+
+.taller-title {
+  color: rgb(145, 0, 145);
+  font-size: 1.7em;
+  margin-bottom: 10px;
+}
+
+.taller-text {
+  line-height: 1.5;
+}
+
+.taller-btn {
+  background-color: rgb(184, 0, 184); /* Color de fondo del botón */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilos para hacerlo responsivo */
+@media (max-width: 600px) {
+  .taller {
+    flex-direction: column;
+  }
+
+  .img,
+  .taller-info {
+    flex: 1;
+    width: 100%;
+  }
+  .taller-title{
+    font-size: 1.1rem;
+  }
+  .taller-text{
+    font-size: .8rem;
+  }
+  .taller-btn {
+    padding: 7px;
+    font-size: 12px;
+  }
+}

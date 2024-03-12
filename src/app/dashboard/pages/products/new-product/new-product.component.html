@@ -1,0 +1,144 @@
+<h2>Formulario Nuevo Producto</h2>
+<form
+  class="form form-product"
+  [formGroup]="productForm"
+  (ngSubmit)="createProduct()"
+  autocomplete="off"
+>
+  <h2>Productos</h2>
+  <p class=>Registra nuevos productos. Diligencia cada uno de los campos según sean requeridos.</p>
+  <div class="field">
+    <label for="name">Nombre*</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Nombre del Producto"
+      minlength="3"
+    />
+    <div
+      *ngIf="productForm.get( 'name' )?.invalid && ( productForm.get( 'name' )?.dirty || productForm.get( 'name' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="productForm.get( 'name' )?.errors?.[ 'required' ]">
+        Nombre de producto es requerido.
+      </small>
+      <small *ngIf="productForm.get( 'name' )?.errors?.[ 'minlength' ]">
+        Nombre de producto debe tener al menos 3 caracteres.
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="price">Precio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="number"
+      formControlName="price"
+      placeholder="Precio del Producto"
+    />
+    <div
+      *ngIf="productForm.get( 'price' )?.invalid && ( productForm.get( 'price' )?.dirty || productForm.get( 'price' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="productForm.get( 'price' )?.errors?.[ 'required' ]">
+        Precio del producto es requerido.
+      </small>
+      <small *ngIf="productForm.get( 'price' )?.errors?.[ 'negativeValue' ]">
+        El precio debe ser mayor o igual a cero
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="quantity">Cantidad*</label>
+    <input
+      id="quantity"
+      class="input-field"
+      type="number"
+      formControlName="quantity"
+      placeholder="Cantidad disponible del Producto"
+    />
+    <div
+      *ngIf="productForm.get( 'quantity' )?.invalid && ( productForm.get( 'quantity' )?.dirty || productForm.get( 'quantity' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="productForm.get( 'quantity' )?.errors?.[ 'required' ]">
+        Cantidad del producto es requerido.
+      </small>
+      <small *ngIf="productForm.get( 'quantity' )?.errors?.[ 'invalidQuantity' ]">
+        El precio debe ser mayor a cero
+      </small>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="image">Imagen del producto*</label>
+    <input
+      id="image"
+      class="input-field"
+      type="text"
+      formControlName="urlImage"
+    />
+    <div
+      *ngIf="productForm.get( 'urlImage' )?.invalid && ( productForm.get( 'urlImage' )?.dirty || productForm.get( 'urlImage' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="productForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
+        La URL no tiene formato de imagen permitido
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="category">Categoria</label>
+    <select
+      id="category"
+      class="input-field"
+      formControlName="category"
+    >
+      <option value="" selected>Seleccione...</option>
+      <option
+        *ngFor="let category of categories"
+        [value]="category.value"
+      >{{ category.name }}</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      class="input-field"
+      formControlName="description"
+      placeholder="Descripción del Producto"
+      cols="20"
+      rows="5"
+      minlength="3"
+      maxlength="1500"
+    ></textarea>
+    <div
+      *ngIf="productForm.get( 'description' )?.invalid && ( productForm.get( 'description' )?.dirty || productForm.get( 'description' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="productForm.get( 'description' )?.errors?.[ 'invalidDescriptionLength' ]">
+        La descripción debe tener una longitud de entre 3 a 1500 caracteres
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <button
+      class="btn btn-primary button"
+      type="submit"
+      [disabled]="this.productForm.invalid"
+    >Crear Producto</button>
+  </div>
+
+  <!-- <div class="errors">
+    <h3 class="title-errors">Errors</h3>
+    <pre class="error">name {{ productForm.get( 'name' )?.errors | json }}</pre>
+    <pre class="error">price {{ productForm.get( 'price' )?.errors | json }}</pre>
+    <pre class="error">quantity {{ productForm.get( 'quantity' )?.errors | json }}</pre>
+    <pre class="error">urlImage {{ productForm.get( 'urlImage' )?.errors | json }}</pre>
+    <pre class="error">category {{ productForm.get( 'category' )?.errors | json }}</pre>
+    <pre class="error">description {{ productForm.get( 'description' )?.errors | json }}</pre>
+  </div> -->
+</form>

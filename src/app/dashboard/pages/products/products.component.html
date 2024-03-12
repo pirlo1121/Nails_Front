@@ -1,0 +1,65 @@
+<ng-container *ngIf="products && products.length > 0; then productList; else noProducts">
+</ng-container>
+
+<ng-template #productList>
+
+  <table>
+    <thead>
+      <tr class="tri">
+        <th>Vista previa</th>
+        <th scope="col" >Nombre y descripción </th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio por unidad</th>
+        <th scope="col">Precio total</th>
+        <th scope="col">Editar/Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td scope="row">
+          <img class="product__image" [src]="product.urlImage" [alt]="product.name">
+        </td>
+        <td>
+          <h3>{{ product.name }}</h3>
+          <p class="product__description">{{ product.description }}</p>
+        </td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.price | currency:'COP':'symbol':'1.0-0' }}</td>
+        <td>{{ product.total! | currency:'USD':'symbol':'1.0-0' }}</td>
+        <td>
+          <button
+            class="btn btn-update"
+            (click)="update( product._id )"
+          >
+            Editar
+          </button>
+          <button
+            class="btn btn-delete"
+            (click)="remove( product._id )"
+          >
+            Borrar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">Total</th>
+        <td></td>
+        <td></td>
+        <td>{{ totales.quantity }}</td>
+        <td>{{ totales.price | currency:'USD':'symbol':'1.0-0' }}</td>
+        <td>{{ totales.total | currency:'USD':'symbol':'1.0-0' }}</td>
+        <th scope="row">Actions</th>
+      </tr>
+    </tfoot>
+  </table>
+
+
+</ng-template>
+
+<ng-template #noProducts>
+  <h3>No has registrado productos</h3>
+</ng-template>

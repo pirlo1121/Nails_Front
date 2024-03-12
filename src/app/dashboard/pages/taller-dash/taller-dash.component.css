@@ -1,0 +1,94 @@
+/* Estilos para la tabla de productos */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  h3 {
+    text-align: center;
+    color:purple;
+    font-size: 1.2rem;
+  }
+  
+  .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+
+  table {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: pink;
+    color: #353535;
+  }
+  th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  tbody tr:hover {
+    background-color: #ecf0f1;
+  }
+  
+  .taller__image {
+    max-width: 130px;
+    width: 100%;
+    max-height: 110px;
+    border-radius: 4px;
+  }
+  
+  .taller__description {
+    color: black;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    margin: 0 5px;
+    color: #fff;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-update{
+    background-color: #2ecc71;
+    transition: background-color 0.3s ease;
+  }
+  .btn-delete{
+    background: rgb(255, 16, 16);
+    transition: background-color 0.3s ease;
+  }
+  /* hover */
+  .btn-delete:hover {
+    background-color: rgb(206, 0, 0);
+  }
+  .btn-update:hover {
+    background-color: #27ae60;
+  }
+  
+  tfoot {
+    background-color: pink;
+    color: #353535;
+    max-width: 70%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para la fila de totales */
+  tfoot th {
+    padding: 16px;
+    text-align: right;
+  }
+  
+  /* Estilos para las acciones en la fila de totales */
+.btn {
+    margin: 0 5px;
+  }
+  

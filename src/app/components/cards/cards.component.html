@@ -1,0 +1,21 @@
+
+  <div class="img">
+    <img class="card-img image-responsive" [src]="products.urlImage" alt="Nombre del producto">
+  </div>
+  <div class="card-info">
+    <h3>{{ products.name }}</h3>
+    <p class="card-p">{{ products.description }}</p>
+    <div class="card-footer">
+      <span class="card-price">${{ products.price | number:'1.0-0' }}</span>
+      <button class="card-btn" (click)="saveStorage()">Comprar</button>
+    </div>
+  </div>
+  
+
+<!-- <div class="card">
+  <img [src]="imagen.url" alt="{{ imagen.descripcion }}">
+  <div class="card-body">
+    <h5 class="card-title">{{ imagen.titulo }}</h5>
+    <p class="card-text">{{ imagen.descripcion }}</p>
+  </div>
+</div> -->

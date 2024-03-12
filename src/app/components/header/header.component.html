@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="menu_icon"[class.menu_icon_Class]="menu_icon_variable" (click)="openMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+    <div class="logo-header">
+      <a routerLink="/"><img src="../../../assets/images/logo-inicial.png" alt="Logotipo inicial de la marca"></a>
+    </div>
+      <div>
+        <ul class="nav-links" [class.menuClass]="menuVariable">
+          <li><a routerLink="/tienda">Tienda</a></li>
+          <li><a routerLink="/talleres">Talleres  </a></li>
+          <li><a routerLink="/servicios">Servicios</a></li>
+        </ul>
+      </div>
+      <a routerLink="/agenda-una-cita" class="btn"><button>Agendar</button></a>
+  </header>
+

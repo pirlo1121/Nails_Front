@@ -1,0 +1,47 @@
+<ng-container *ngIf="talleres && talleres.length > 0; then tallerList; else noTalleres">
+</ng-container>
+
+<ng-template #tallerList>
+  <div class="contenido">
+  <table>
+    <thead>
+      <tr class="tri">
+        <th>Preview</th>
+        <th scope="col">Name and Description</th>
+        <th scope="col">Category</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let taller of talleres">
+        <td scope="row">
+          <img class="taller__image" [src]="taller.urlImage" [alt]="taller.name">
+        </td>
+        <td>
+          <h3>{{ taller.name }}</h3>
+          <p class="taller__description">{{ taller.description }}</p>
+        </td>
+        <td>{{ taller.price | currency:'USD':'symbol':'1.0-0' }}</td>
+        <td>
+          <button
+            class="btn btn-update"
+            (click)="update( taller._id )"
+          >Edit</button> 
+          <button
+            class="btn btn-delete"
+            (click)="remove( taller._id )"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</ng-template>
+
+<ng-template #noTalleres>
+  <h3>No has registrado talleres</h3>
+</ng-template>

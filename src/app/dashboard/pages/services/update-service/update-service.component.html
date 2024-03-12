@@ -1,0 +1,104 @@
+<p>update-service works!</p>
+<form class="form form-service"
+      [formGroup]="serviceForm"
+      (ngSubmit)="updateService()"
+      autocomplete="off">
+  <h2>Actualiza Servicio</h2>
+  <p>Diligencia cada uno de los campos según sean requeridos.</p>
+  <div class="field">
+    <label for="name">Titulo</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Nombre del servicio"
+      minlength="3"
+    />
+    <div
+      *ngIf="serviceForm.get('name')?.invalid && (serviceForm.get('name')?.dirty || serviceForm.get('name')?.touched)"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get('name')?.errors?.['required']">
+        Nombre del servicio es requerido.
+      </small>
+      <small *ngIf="serviceForm.get('name')?.errors?.['minlength']">
+        Nombre del servicio debe tener al menos 3 caracteres.
+      </small>
+    </div>
+  </div>
+
+  
+  <div class="field">
+    <label for="price">Precio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="number"
+      formControlName="price"
+      placeholder="Precio del Producto"
+    />
+    <div
+      *ngIf="serviceForm.get( 'price' )?.invalid && ( serviceForm.get( 'price' )?.dirty || serviceForm.get( 'price' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'price' )?.errors?.[ 'required' ]">
+        Precio del producto es requerido.
+      </small>
+      <small *ngIf="serviceForm.get( 'price' )?.errors?.[ 'negativeValue' ]">
+        El precio debe ser mayor o igual a cero
+      </small>
+    </div>
+  </div>
+
+
+  <div class="field">
+    <label for="image">Imagen del producto</label>
+    <input
+      id="image"
+      class="input-field"
+      type="text"
+      formControlName="urlImage"
+    />
+    <div
+      *ngIf="serviceForm.get( 'urlImage' )?.invalid && ( serviceForm.get( 'urlImage' )?.dirty || serviceForm.get( 'urlImage' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
+        La URL no tiene formato de imagen permitido
+      </small>
+    </div>
+  </div>
+
+  
+  <div class="field">
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      class="input-field"
+      formControlName="description"
+      placeholder="Descripción del Producto"
+      cols="20"
+      rows="5"
+      minlength="3"
+    ></textarea>
+    <div
+      *ngIf="serviceForm.get( 'description' )?.invalid && ( serviceForm.get( 'description' )?.dirty || serviceForm.get( 'description' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="serviceForm.get( 'description' )?.errors?.[ 'invalidDescriptionLength' ]">
+        La descripción debe tener una longitud de entre 3 a 140 caracteres
+      </small>
+    </div>
+  </div>
+
+  <!-- Resto del formulario ... -->
+
+  <div class="field">
+    <button
+      class="btn btn-primary button"
+      type="submit"
+      [disabled]="serviceForm.invalid"
+    >Actualizar Servicio</button>
+  </div>
+</form>

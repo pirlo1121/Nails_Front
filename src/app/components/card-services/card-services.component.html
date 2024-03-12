@@ -1,0 +1,17 @@
+
+<div class="modern-card">
+  <div class="card-img">
+    <img class="img-img" [src]="service.urlImage" alt="service">
+  </div>
+  <div class="card-content">
+    <div class="card-info">
+      <h2 class="card-title">{{service.name}}</h2>
+      <p class="card-description">{{ service.description }}</p>
+      <p class="card-price"> $ {{ service.price | number:'1.0-0' }}</p>
+    </div>
+    <div >
+      <button class="card-action" (click)="agendarServicio(service.name)">Agendar</button>
+    </div>
+  </div>
+</div>
+

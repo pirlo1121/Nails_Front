@@ -1,0 +1,110 @@
+<h2>Formulario Nuevo Taller</h2>
+<form
+  class="form form-taller"
+  [formGroup]="tallerForm"
+  (ngSubmit)="createTaller()"
+  autocomplete="off"
+>
+  <h2>Talleres</h2>
+  <p class=>Registra nuevos talleres. Diligencia cada uno de los campos según sean requeridos.</p>
+  <div class="field">
+    <label for="name">Nombre*</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Nombre del Taller"
+      minlength="3"
+    />
+    <div
+      *ngIf="tallerForm.get( 'name' )?.invalid && ( tallerForm.get( 'name' )?.dirty || tallerForm.get( 'name' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="tallerForm.get( 'name' )?.errors?.[ 'required' ]">
+        Nombre de taller es requerido.
+      </small>
+      <small *ngIf="tallerForm.get( 'name' )?.errors?.[ 'minlength' ]">
+        Nombre de taller debe tener al menos 3 caracteres.
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <label for="price">Precio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="number"
+      formControlName="price"
+      placeholder="Precio del Taller"
+    />
+    <div
+      *ngIf="tallerForm.get( 'price' )?.invalid && ( tallerForm.get( 'price' )?.dirty || tallerForm.get( 'price' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="tallerForm.get( 'price' )?.errors?.[ 'required' ]">
+        Precio del taller es requerido.
+      </small>
+      <small *ngIf="tallerForm.get( 'price' )?.errors?.[ 'negativeValue' ]">
+        El precio debe ser mayor o igual a cero
+      </small>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="image">Imagen del taller*</label>
+    <input
+      id="image"
+      class="input-field"
+      type="text"
+      formControlName="urlImage"
+    />
+    <div
+      *ngIf="tallerForm.get( 'urlImage' )?.invalid && ( tallerForm.get( 'urlImage' )?.dirty || tallerForm.get( 'urlImage' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="tallerForm.get( 'urlImage' )?.errors?.[ 'invalidUrl' ]">
+        La URL no tiene formato de imagen permitido
+      </small>
+    </div>
+  </div>
+  
+  <div class="field">
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      class="input-field"
+      formControlName="description"
+      placeholder="Descripción del taller"
+      cols="20"
+      rows="5"
+      minlength="3"
+      maxlength="2000"
+    ></textarea>
+    <div
+      *ngIf="tallerForm.get( 'description' )?.invalid && ( tallerForm.get( 'description' )?.dirty || tallerForm.get( 'description' )?.touched )"
+      class="error-message"
+    >
+      <small *ngIf="tallerForm.get( 'description' )?.errors?.[ 'invalidDescriptionLength' ]">
+        La descripción debe tener una longitud de entre 3 a 1000 caracteres
+      </small>
+    </div>
+  </div>
+  <div class="field">
+    <button
+      class="btn btn-primary button"
+      type="submit"
+      [disabled]="this.tallerForm.invalid"
+    >Crear Taller</button>
+  </div>
+
+  <!-- <div class="errors">
+    <h3 class="title-errors">Errors</h3>
+    <pre class="error">name {{ productForm.get( 'name' )?.errors | json }}</pre>
+    <pre class="error">price {{ productForm.get( 'price' )?.errors | json }}</pre>
+    <pre class="error">quantity {{ productForm.get( 'quantity' )?.errors | json }}</pre>
+    <pre class="error">urlImage {{ productForm.get( 'urlImage' )?.errors | json }}</pre>
+    <pre class="error">category {{ productForm.get( 'category' )?.errors | json }}</pre>
+    <pre class="error">description {{ productForm.get( 'description' )?.errors | json }}</pre>
+  </div> -->
+</form>

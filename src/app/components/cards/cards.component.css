@@ -1,0 +1,161 @@
+/* .card {
+  border: 1px dotted blue;
+  width: 100vw;
+} */
+
+
+.card-price {
+  display: block;
+  margin: 0.5rem;
+}
+
+.img{
+  overflow: hidden;
+  height: 255px;
+  width: 245px;
+}
+h3 {
+  color: rgb(172, 0, 172);
+  margin: .2rem 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+.card-info{
+  max-width: 245px;
+  width: 100%;
+}
+.card-p {
+  color: black;
+  font-size: .6rem;
+  letter-spacing: 2px;
+}
+
+.card-img {
+  height: 320px;
+  width: 100vw;
+  transform: scale(1);
+  transition: transform 0.6s;
+}
+
+
+.card-btn {
+  background-color: rgb(255, 168, 158);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+@media ( min-width: 568px ) {
+  .card-img {
+    height: 255px;
+    width: 245px;
+  }
+  .card {
+    width: 50%;
+  }
+  .card-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+}
+
+
+.card-btn:hover {
+  background-color: rgb(252, 145, 133);
+}
+.card-img:hover {
+  transform: scale(1.1);
+}
+
+/* .card {
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s;
+    width: 100%;
+    max-width: 220px;
+    overflow: hidden;
+  }
+  .img {
+    max-width: 340px;
+    max-height: 230px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .card-img{
+    transform: scale(1);
+    transition: transform 0.6s;
+    max-width: 340px;
+    max-height: 230px;
+    height: 100%;
+  }
+
+
+  .card-info {
+    padding: 7px;
+  }
+  h3{
+    margin: .2rem;
+  }
+
+  .card-p {
+    color: #666;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    margin: 5px 0;
+  }
+
+  .card-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 .4rem;
+  }
+
+  .card-btn {
+    background-color: rgb(255, 168, 158);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+
+  @media (max-width: 700px) {
+    .card {
+      max-width: 120px;
+      max-height: 210px;
+      margin: 1rem;
+    }
+    .card-img{
+      max-height: 120px;
+    }
+    .card-info {
+      padding: 3px;
+    }
+    .card-p {
+      font-size: .4rem;
+      margin: 6px 2px;
+    }
+    .card-price {
+      font-size: .5rem;
+      margin: 0 .4rem;
+    }
+    .card-btn {
+      padding: 5px 10px;
+      font-size: .3rem
+    }
+  }
+
+
+ */

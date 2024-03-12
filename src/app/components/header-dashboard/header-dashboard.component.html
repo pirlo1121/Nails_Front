@@ -1,0 +1,37 @@
+<header class="header">
+    <div class="menu_icon"[class.menu_icon_Class]="menu_icon_variable" (click)="openMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <div class="logo-header">
+        <a routerLink="/home"><img src="../../../assets/images/logo-inicial.png" alt="Logotipo inicial de la marca"></a>
+      </div>
+        <div>
+          <ul class="nav-links" [class.menuClass]="menuVariable">
+            
+      <li class="menu-list"><a class="link-dashboard">Productos</a>
+        <ul class="submenu">
+            <li><a class="link-dashboard" routerLink="/dashboard/products">Mis productos</a></li>
+            <li><a class="link-dashboard" routerLink="/dashboard/products/new">Producto nuevo</a></li>
+
+        </ul>
+    </li>
+    
+    <li class="menu-list"><a class="link-dashboard">Servicios</a>
+        <ul class="submenu">
+            <li><a class="link-dashboard" routerLink="/dashboard/servicios">Mis servicios</a></li>
+            <li><a class="link-dashboard" routerLink="/dashboard/servicios/new-service"> servicio nuevo</a></li>
+        </ul>
+    </li>
+    
+    <li class="menu-list"><a class="link-dashboard">Talleres</a>
+        <ul class="submenu">
+            <li><a class="link-dashboard" routerLink="/dashboard/talleres">Mis Talleres</a></li>
+            <li><a class="link-dashboard" routerLink="/dashboard/talleres/new">Taller nuevo</a></li>
+        </ul>
+    </li>
+          </ul>
+        </div>
+        <a (click)="logout()" class="btn"><button>Logout</button></a>
+    </header>

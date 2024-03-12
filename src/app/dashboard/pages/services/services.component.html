@@ -1,0 +1,47 @@
+<ng-container *ngIf="services && services.length > 0; then serviceList; else noServices"></ng-container>
+
+<ng-template #serviceList>
+  <h3>Servicios registrados</h3>
+
+
+    <table>
+        <thead>
+            <tr class="tri">
+                <th>Preview</th>
+                <th scope="col">Nombre y descripción</th>
+                <th scope="col"> Precio </th>
+                <th scope="col">Editar/Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let service of services">
+            <td scope="row">
+                <img class="service_image" [src]="service.urlImage" [alt]="service.name">
+            </td>
+            <td>
+                <h3>{{service.name}}</h3>
+                <p class="service_description">{{service.description}}</p>
+            </td>
+            <td>{{service.price! | currency:'COP':'symbol':'1.0-0' }}</td>
+            <td>
+                <button
+                class="btn btn-update"
+                (click)="updateServiceButton(service._id)">
+            Edit
+            </button>
+            <button
+            class="btn btn-delete"
+            (click)="removeServiceButton(service._id)"
+            >
+            Delete
+           </button>
+            </td>
+            </tr>
+        </tbody>
+      </table>
+
+</ng-template>
+
+<ng-template #noServices>
+  <h3>No has registrado servicios</h3>
+</ng-template>

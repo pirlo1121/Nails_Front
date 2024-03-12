@@ -1,0 +1,13 @@
+<div class="taller"
+    *ngFor="let taller of talleres"
+>
+    <div class="img">
+        <img class="img-taller" [src]="taller.urlImage" alt="">
+    </div>
+    <div class="taller-info">
+        <h3 class="taller-title">{{taller.name}}</h3> <br>
+        <p class="taller-text">{{taller.description}}</p> <br>
+        <p class="taller-text">{{taller.price}}</p> <br>
+        <button class="taller-btn"> más informacion</button>
+    </div>
+</div>
