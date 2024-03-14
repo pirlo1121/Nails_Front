@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -16,9 +15,20 @@ export class HeaderComponent {
     const burger: HTMLElement | null = document.querySelector('.burger');
 
     if (burger && navbar) {
-      burger.addEventListener('click', (e: Event) => {
-        navbar.classList.toggle('show-nav');
-      });
+      const span: HTMLElement | null = burger.querySelector('span');
+      if (span) {
+        span.addEventListener('click', (e: Event) => {
+          navbar.classList.toggle('show-nav');
+        });
+      }
+
+      // Evitamos que el evento del logo afecte al menú
+      const logo: HTMLElement | null = document.querySelector('.navbar .logo');
+      if (logo) {
+        logo.addEventListener('click', (e: Event) => {
+          e.stopPropagation(); // Evita que el evento se propague al contenedor principal (nav)
+        });
+      }
 
       // Bonus
       const navbarLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.navbar a');
@@ -28,5 +38,4 @@ export class HeaderComponent {
         });
       });
     }
-  }
-}
+  }}
