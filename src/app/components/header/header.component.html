@@ -1,19 +1,13 @@
-<header class="header">
-  <div class="menu_icon"[class.menu_icon_Class]="menu_icon_variable" (click)="openMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-    <div class="logo-header">
-      <a routerLink="/"><img src="../../../assets/images/logo-inicial.png" alt="Logotipo inicial de la marca"></a>
-    </div>
-      <div>
-        <ul class="nav-links" [class.menuClass]="menuVariable">
-          <li><a routerLink="/tienda">Tienda</a></li>
-          <li><a routerLink="/talleres">Talleres  </a></li>
-          <li><a routerLink="/servicios">Servicios</a></li>
-        </ul>
-      </div>
-      <a routerLink="/agenda-una-cita" class="btn"><button>Agendar</button></a>
-  </header>
+<nav class="navbar dark-mode" role="navigation">
+  <div class="navbar__logo"> <a routerLink="/home"><img class="logo" src="../../../assets/images/logo-inicial.png" alt=""> </a></div>
+  <ul class="navbar__links">
+    <li class="navbar__link first"><a routerLink="/tienda">Tienda</a></li>
+    <li class="navbar__link second"><a routerLink="/talleres">Talleres</a></li>
+    <li class="navbar__link third"><a routerLink="/servicios">Servicios</a></li>
+    <li><a routerLink="/agenda-una-cita" class="btn"><button>Agendar</button></a></li>
+  </ul>
+  <button class="burger">
+    <span class="bar"></span>
+  </button>
+</nav>
 

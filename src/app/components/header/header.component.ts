@@ -7,12 +7,26 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  menuVariable: boolean= false;
-  menu_icon_variable: boolean=false;
+  ngAfterViewInit(): void {
+    this.toggleMenu();
+  }
 
-  
-  openMenu() {
-    this.menuVariable = !this.menuVariable;
-    this.menu_icon_variable= !this.menu_icon_variable;
+  private toggleMenu(): void {
+    const navbar: HTMLElement | null = document.querySelector('.navbar');
+    const burger: HTMLElement | null = document.querySelector('.burger');
+
+    if (burger && navbar) {
+      burger.addEventListener('click', (e: Event) => {
+        navbar.classList.toggle('show-nav');
+      });
+
+      // Bonus
+      const navbarLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.navbar a');
+      navbarLinks.forEach(link => {
+        link.addEventListener('click', (e: Event) => {
+          navbar.classList.toggle('show-nav');
+        });
+      });
+    }
   }
 }

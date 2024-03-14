@@ -1,165 +1,165 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-/* .header{
-    background-color: #ffdcdc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80px;
-    padding: 5px 10%;
+
+/* .light-mode {
+  --navbar-color: #222;
+  --navbar-bg-color: #F0F0F0;
 } */
-header {
-    height: 5rem;
-    background-color: #ffdcdc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 80px;
-    padding: 5px 10%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    font-weight: 100;
-}
-.logo-header{
-    cursor: pointer;
-    
-}
-.logo-header img{
-    height: 100px;
-    width: auto;
-}
-.logo-header img:hover{
-    transform: scale(1.1);
-    transition: all 0.3s;
-
-}
-.nav-links{
-    list-style: none;
+.dark-mode {
+  --navbar-color: #ffffff;
+  --navbar-bg-color: #000000;
 }
 
-.nav-links li{
-    display: inline-block;
-    padding: 0 20px;
+ul {
+  list-style:none;
 }
-.nav-links li:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-    
+.logo{
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+  width: 3.5rem;
 }
-
-.nav-links a{
-    font-size: 700;
-    color: #242424;
-    text-decoration: none;
+.navbar {
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  padding:10px;
+  font-size:1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  background:var(--navbar-bg-color);
+  color:var(--navbar-color);
 }
-.nav-links li a:hover{
-    color: #894DAD;
+.navbar__links {
+  display:flex;
+  /* justify-content: space-between; */
 }
-.btn button{
-    font-weight: 700;
-    color: #894DAD;
-    padding: 9px 25px;
-    background: #eceff1;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.1s ease 0s;
+.navbar__link {
+  padding:0 10px;
 }
-.btn-login{
-    margin-left: 1px;
+.navbar__link > a {
+  color:var(--navbar-color);
+  text-decoration:none;
 }
-.btn button:hover{
-    background-color: #e2f1f8;
-    color: #242424;
-    transform: scale(1.1);
+.burger {
+  display:none;
 }
 
-/* Aqui empieza el menu hamburguesa */
-
-/*.nav_toggle{
-    display: none; /* Por defecto, ocultamos el icono de hamburguesa en pantallas grandes 
-    flex-direction: column;
-}
-*/
-@media (max-width: 1080px) {
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    ul#_links {
-        z-index: 1;
-    }
-/* Menu Hamburguesa */
-    .nav-links{
-        position: fixed;
-        top: 100px;
-        background: #ffdcdc;
-        display: flex;
-        flex-direction: column;
-        left: -1100px;
-        width: 100%;
-        height: auto;
-/*        transform: translateX(-100%);*/
-        transition: 0.4s ease all;
-    }
-    .nav-links li{
-        text-align: center;
-        margin: 1%;
-    }
-    
-    .menu_icon span{
-        width: 30px;
-        height: 4px;
-        background: black;
-        margin-bottom: 5px;
-        border-radius: 2px;
-        transform-origin: 5px 0px;
-        transition: all 0.2s linear;        
-    }
-    .menu_icon {
-        display: flex !important;
-        flex-direction: column;
-        margin: 15px;
-        cursor: pointer;
-    }
-    .menuClass{
-        left: 0
-    }
-
-    .menu_icon_Class span:nth-child(2){
-        display: none;
-    }
-    .menu_icon_Class span:nth-child(1){
-        transform: rotate(45deg) translate(0px,0px);
-
-    }
-    .menu_icon_Class span:nth-child(3){
-        transform: rotate(-45deg) translate(-5px, 1px);
-    }
-    /*
-    .open {
-        transform: translateX(0) !important;
-        transform: translateY(0) !important;
-    }
-    .close span{
-        transform: rotate(45deg) translate(0px,0px);
-    }
-    .close span:nth-child(2){
-        display: none;
-    }
-    .close span:nth-child(3){
-        transform: rotate(-45deg) translate(-5px, 1px);
-    }*/
-}
-/*
-.menu-toggle {
-    display: none;
+/*  Small device */
+@media screen and (max-width:767.98px) {
+  .navbar__links {
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    width:0;
+    height:calc(100vh - 65px);
+    position:absolute;
+    top:65px;
+    right:0;
+    background:var(--navbar-bg-color);
+    transform: translateX(110%);
+    transition: all .5s ease-in-out;
   }
-  
-  .menu {
-    display: none;
-  }*/
-  
+  .show-nav .navbar__links {
+
+    width:100vw;
+    transform: translateX(0);
+  }
+  .navbar__link {
+    transform: translateX(101%);
+    transition: all .5s ease-in-out;
+  }
+
+  .show-nav .navbar__link  {
+    transform: translateX(0);
+  }
+  .navbar__link > a {
+    display:block;
+    padding:1rem;
+    font-size:1.6rem;
+    color:var(--navbar-color);
+    transition: all .4s ease-in-out;
+  }
+  .navbar__link > a:hover {
+    padding-left:2rem;
+    letter-spacing:5px;
+  }
+
+  /* Toggle menu */
+  .burger {
+    display:block;
+    position:relative;
+    padding:0;
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+  }
+  .bar {
+    display:block;
+    width:45px;
+    height:4px;
+    border-radius:3px;
+    background:var(--navbar-color);
+    transition: all .5s ease-in-out;
+  }
+  .bar::before, .bar::after {
+    content:"";
+    width:45px;
+    height:4px;
+    position:absolute;
+    left:0;
+    background:var(--navbar-color);
+    border-radius:3px;
+    transition: all .5s ease-in-out;
+  }
+  .bar::before {
+    transform:translateY(-12px)
+  }
+  .bar::after {
+    transform:translateY(12px)
+  }
+  .show-nav .bar {
+    width:0;
+    background:transparent;
+  }
+  .show-nav .bar::before {
+    transform:rotate(45deg);
+  }
+  .show-nav .bar::after {
+    transform:rotate(-45deg);
+  }
+
+  /* Bonus - Animations */
+  .show-nav .first {
+    transition: all 1s ease-out;
+  }
+  .show-nav .second {
+    transition: all 1.1s ease-out;
+  }
+  .show-nav .third {
+    transition: all 1.15s ease-out;
+  }
+
+}
+
+/*  Medium device - Bonus */
+@media screen and (min-width:768px) {
+  .navbar__link > a::after {
+    display:block;
+    content:"";
+    width:0;
+    height:1px;
+    background:var(--navbar-color);
+    transition:width .4s;
+  }
+  .navbar__link:hover > a::after {
+    width:100%;
+  }
+}
+
+/* bonus */
+.main-content, #section2 {
+  height:100vh;
+}
+
