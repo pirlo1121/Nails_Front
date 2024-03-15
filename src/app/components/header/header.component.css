@@ -36,9 +36,11 @@ ul {
 }
 .navbar__links {
   display:flex;
-  justify-content: space-between;
+  margin: .5rem 0
+  /* justify-content: space-between; */
 }
 .navbar__link {
+  margin: .3rem 0;
   padding:0 10px;
   margin: 0 1rem;
 }
@@ -119,7 +121,7 @@ ul {
   }
   .bar {
     display:block;
-    width:40px;
+    width:45px;
     height:4px;
     border-radius:3px;
     background:var(--navbar-color);
@@ -127,7 +129,7 @@ ul {
   }
   .bar::before, .bar::after {
     content:"";
-    width:40px;
+    width:45px;
     height:4px;
     position:absolute;
     left:0;
