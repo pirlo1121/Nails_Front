@@ -7,7 +7,7 @@
 } */
 .dark-mode {
   --navbar-color: #000000;
-  --navbar-bg-color: #ffc5e0;
+  --navbar-bg-color: #ffdcec;
 }
 
 ul {
@@ -16,8 +16,8 @@ ul {
 .logo{
   margin: 0;
   padding: 0;
-  height: 3rem;
-  width: 3.5rem;
+  height: 5rem;
+  width: 5rem;
 }
 .navbar {
   height: 5rem;
@@ -25,7 +25,6 @@ ul {
   position: fixed;
   top: 0;
   z-index: 1000;
-
   display:flex;
   align-items:center;
   justify-content:space-around;
@@ -42,7 +41,7 @@ ul {
 .navbar__link {
   padding:0 10px;
 }
-.navbar__link > a {
+.links_menu{
   color:var(--navbar-color);
   text-decoration:none;
   font-size: 1.2rem;
@@ -50,7 +49,21 @@ ul {
 .burger {
   display:none;
 }
+.redes {
+  display: flex;
+  align-items: center;
+}
 
+.redes-img{
+  margin: 0 .3rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.youtube{
+  height: 2rem;
+  width: 2rem;
+
+}
 /*  Small device */
 @media screen and (max-width:767.98px) {
   .navbar__links {
