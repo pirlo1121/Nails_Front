@@ -7,7 +7,7 @@
 } */
 .dark-mode {
   --navbar-color: #000000;
-  --navbar-bg-color: #ffffff;
+  --navbar-bg-color: white;
 }
 
 ul {
@@ -36,15 +36,16 @@ ul {
 }
 .navbar__links {
   display:flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 .navbar__link {
   padding:0 10px;
+  margin: 0 1rem;
 }
 .links_menu{
   color:var(--navbar-color);
   text-decoration:none;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .burger {
   display:none;
@@ -56,17 +57,18 @@ ul {
 
 .redes-img{
   margin: 0 .3rem;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.3rem;
+  width: 1.3rem;
 }
 .youtube{
-  height: 2rem;
-  width: 2rem;
+  height: 1.7rem;
+  width: 1.7rem;
 
 }
 /*  Small device */
 @media screen and (max-width:767.98px) {
   .navbar__links {
+    margin: .4rem 0;
     overflow:hidden;
     display:flex;
     flex-direction:column;
@@ -95,7 +97,7 @@ ul {
   .navbar__link > a {
     display:block;
     padding:1rem;
-    font-size:1.6rem;
+    font-size:1.3rem;
     color:var(--navbar-color);
     transition: all .4s ease-in-out;
   }
@@ -109,15 +111,15 @@ ul {
     display:block;
     position:relative;
     padding:0;
-    width:45px;
-    height:45px;
+    width:40px;
+    height:40px;
     border:none;
     background:transparent;
     cursor:pointer;
   }
   .bar {
     display:block;
-    width:45px;
+    width:40px;
     height:4px;
     border-radius:3px;
     background:var(--navbar-color);
@@ -125,7 +127,7 @@ ul {
   }
   .bar::before, .bar::after {
     content:"";
-    width:45px;
+    width:40px;
     height:4px;
     position:absolute;
     left:0;

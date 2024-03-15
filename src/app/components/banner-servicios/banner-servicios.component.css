@@ -1,37 +1,35 @@
-.banner-servicios-principal {
-    margin: 0;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    background-color: #ffdcdc;
+.informacion{
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 8rem 0;
+  /* border: solid 1px rgba(0, 0, 0, 0.329); */
 }
+.text{
+  width: 50%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: .4rem 1rem;
+}
+h2 {
+  font-size: 2rem;
+  color: rgb(163, 0, 157);
+}
+.text_p{
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  line-height: 1.5
 
-.bg-nailtools {
-    background-image: url(../../../assets/images/Home/nailarttoolsbg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 300px;
 }
-.title-banner {
-    color: #eceff1;
-    font-weight: bold;
-    font-size: 1.4rem;
+.imagen{
+  max-width: 50%;
+
 }
-.slogan-banner {
-    color: #eceff1;
-}
-.btn-agenda {
-    margin-top: 10px;
-    font-weight: 700;
-    color: #894DAD;
-    padding: 9px 25px;
-    background: #eceff1;
-    border: none;
-    cursor: pointer;
-    transition: all 0.1s ease 0s;
+.img{
+  max-width: 100%;
 }

@@ -7,12 +7,12 @@
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-decoration: none;
-    
-    
+
+
 }
 
 body{
-    background-color: #FFF6F4 ;
+    background-color: #ffffff ;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 
@@ -20,7 +20,7 @@ body{
 
 
 
-.image-responsive {
+.img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
