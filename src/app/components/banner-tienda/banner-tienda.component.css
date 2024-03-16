@@ -1,5 +1,6 @@
+
+
 .informacion{
-  background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-around;
@@ -17,7 +18,8 @@
 }
 h2 {
   font-size: 2.4rem;
-  color: rgb(163, 0, 157);
+  /* color: rgb(163, 0, 157); */
+  color: #ff6272;
 }
 .text_p{
   letter-spacing: 1px;
@@ -26,7 +28,7 @@ h2 {
 
 }
 .btn {
-  background-color: rgb(163, 0, 157);
+  background-color: #f34f5f;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -59,7 +61,7 @@ h2 {
 
 .imagen{
   max-width: 40%;
-  margin: 2.5%;
+  margin: 3%;
 
 }
 .img{
