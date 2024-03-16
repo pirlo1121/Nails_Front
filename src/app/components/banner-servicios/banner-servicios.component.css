@@ -16,16 +16,23 @@
 }
 h2 {
   font-size: 2.4rem;
-  color: rgb(163, 0, 157);
+  /* color: rgb(163, 0, 157); */
+  color: #f34f5f;
 }
 .text_p{
   letter-spacing: 1px;
   font-size: 1.3rem;
   line-height: 1.5
+}
+.link-agenda{
+  text-decoration: none;
+  font-size:1.2rem;
+  color: black ;
+  font-weight: bold;
 
 }
 .btn {
-  background-color: rgb(163, 0, 157);
+  background-color: #f34f5f;
   border-radius: 8px;
   border-style: none;
   box-sizing: border-box;
@@ -33,14 +40,14 @@ h2 {
   cursor: pointer;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   height: 40px;
   line-height: 20px;
   list-style: none;
   margin: 0;
   outline: none;
-  padding: 10px 16px;
+  padding: 8px 13px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -53,7 +60,7 @@ h2 {
 
 .btn:hover,
 .button-1:focus {
-  background-color: #F082AC;
+  background-color: #c3346b;
 }
 
 .imagen{
