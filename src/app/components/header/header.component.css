@@ -6,8 +6,8 @@
   --navbar-bg-color: #F0F0F0;
 } */
 .dark-mode {
-  --navbar-color: #000000;
-  --navbar-bg-color: white;
+  --navbar-color: #3b3b3b;
+  --navbar-bg-color: rgb(255, 255, 255);
 }
 
 ul {
@@ -47,6 +47,7 @@ ul {
 .links_menu{
   color:var(--navbar-color);
   text-decoration:none;
+  font-weight: bold;
   font-size: 1rem;
 }
 .burger {

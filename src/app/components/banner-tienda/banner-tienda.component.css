@@ -1,69 +1,107 @@
 
-
 .informacion{
+  background-color: rgb(243, 241, 242);
   color: rgb(0, 0, 0);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 6rem 0;
+  margin: 0;
+  padding:10%;
 }
 .text{
   width: 50%;
   max-width: 100%;
+  text-align: justify;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: .4rem 1rem;
+  /* padding: .4rem 1rem; */
 }
 h2 {
-  font-size: 2.4rem;
-  /* color: rgb(163, 0, 157); */
-  color: #f34f5f;
-}
-.text_p{
-  letter-spacing: 1px;
-  font-size: 1.3rem;
-  line-height: 1.5
-
-}
-.btn {
-  background-color: #f34f5f;
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
+  position: relative; /* Para permitir la superposición de elementos */
+  display: inline-block; /* Para que el ancho del contenedor se ajuste al contenido */
+  color: rgb(255, 0, 0);
+  text-decoration: none; /* Quitamos la decoración de subrayado */
+  font-size: 2.5rem;
+  font-family: "Cardo", serif;
+  padding-bottom: 5px;
   cursor: pointer;
-  display: inline-block;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  height: 40px;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  outline: none;
-  padding: 8px 13px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
-.btn:hover,
-.button-1:focus {
-  background-color: #c3346b;
+.text_p{
+  letter-spacing: .8px;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.text_link{
+  text-decoration: none;
+  font-size: 1.9rem;
+  color: rgb(255, 0, 0);
+  transition: color 0.3s;
 }
 
 .imagen{
-  max-width: 40%;
-  margin: 3%;
+  width: 50%;
+  /* width: 100%; */
 
+  margin: 5%;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
+
 .img{
+  border-radius: 3px;
   max-width: 100%;
+  display: block;
+}
+
+/* HOVER Y ANIMACIONES */
+
+h2::after {
+  content: ''; /* Contenido generado después del texto */
+  position: absolute; /* Posicionamiento absoluto para superponerlo al texto */
+  left: 0; /* Inicia desde la izquierda del contenedor */
+  bottom: 0; /* En la parte inferior del contenedor */
+  width: 100%; /* Ancho completo */
+  height: 1.4px; /* Altura de la línea */
+  background-color: #bf1717; /* Color de la línea */
+  transform: scaleX(0); /* Inicialmente la línea no tiene ancho */
+  transition: transform 0.3s ease; /* Efecto de transición suave */
+}
+
+h2:hover::after {
+  transform: scaleX(1); /* Al pasar el cursor sobre el título, la línea se expande */
+}
+
+.revelar-texto {
+  position: relative;
+  display: inline-block;
+  color: #333;
+  overflow: hidden; /* Oculta el texto que se revelará */
+}
+
+.imagen::after {
+  content: attr(data-texto); /* Contenido del atributo data-texto */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%; /* El texto ocupa el 50% de la altura de la imagen */
+  background-color: rgba(0, 0, 0, 0.712); /* Color de fondo semitransparente */
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+  transform: translateY(100%); /* Empieza fuera de la vista */
+ }
+
+.imagen:hover::after {
+  transform: translateY(0); /* Muestra el texto al pasar el cursor */
+}
+
+.text_link:hover {
+  color: #e10000; /* Cambia el color del texto al pasar el cursor */
 }
