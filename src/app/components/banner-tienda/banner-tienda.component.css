@@ -21,7 +21,7 @@
 h2 {
   position: relative; /* Para permitir la superposición de elementos */
   display: inline-block; /* Para que el ancho del contenedor se ajuste al contenido */
-  color: rgb(255, 0, 0);
+  color: rgb(255, 0, 81);
   text-decoration: none; /* Quitamos la decoración de subrayado */
   font-size: 2.5rem;
   font-family: "Cardo", serif;
@@ -38,7 +38,7 @@ h2 {
 .text_link{
   text-decoration: none;
   font-size: 1.9rem;
-  color: rgb(255, 0, 0);
+  color: rgb(229, 0, 0);
   transition: color 0.3s;
 }
 
@@ -104,4 +104,31 @@ h2:hover::after {
 
 .text_link:hover {
   color: #e10000; /* Cambia el color del texto al pasar el cursor */
+}
+
+
+/* media quaries */
+@media screen and (max-width:768px){
+  .informacion {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+  .text{
+    width: 90%;
+  }
+  h2{
+    font-size: 1.7rem;
+    margin: 2rem 0 0 0;
+  }
+  .text_p{
+    letter-spacing: .6px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  .imagen{
+      width: 95%;
+      height: 200px;
+      margin: 1%;
+  }
+
 }

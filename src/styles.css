@@ -28,10 +28,6 @@ body{
   cursor: pointer; /* Aplica el cursor de puntero */
 }
 
-.cursor-custom {
-  cursor: url('../src/assets/images/unas.png'), auto; /* Cambia el cursor a una imagen personalizada */
-}
-
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
