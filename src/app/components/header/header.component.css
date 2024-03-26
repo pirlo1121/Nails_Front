@@ -155,8 +155,7 @@ ul {
     transform:rotate(-45deg);
   }
 
-  /* Bonus - Animations */
-  .show-nav .first {
+  /* .show-nav .first {
     transition: all 1s ease-out;
   }
   .show-nav .second {
@@ -164,7 +163,7 @@ ul {
   }
   .show-nav .third {
     transition: all 1.15s ease-out;
-  }
+  } */
 
 }
 
