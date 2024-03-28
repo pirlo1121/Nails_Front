@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TallerService } from 'src/app/services/taller/taller.service';
+import { TallerService } from 'src/app/services/taller.service';
 
 @Component({
   selector: 'app-taller',

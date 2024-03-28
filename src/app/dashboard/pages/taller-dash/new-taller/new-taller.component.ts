@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TallerDashService } from 'src/app/dashboard/services/taller-dash.service';
+import { TallerService } from 'src/app/services/taller.service';
 import { ValidateFormsService } from 'src/app/services/validate-forms.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class NewTallerComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private tallerDashService: TallerDashService,
+    private TallerService: TallerService,
     private router: Router,
     private validateForm: ValidateFormsService
   ) {}
@@ -27,7 +27,7 @@ export class NewTallerComponent {
   createTaller() {
     console.log( this.tallerForm.value);
 
-    this.tallerDashService.createTaller( this.tallerForm.value )
+    this.TallerService.createTaller( this.tallerForm.value )
       .subscribe(( response ) => {
         console.log( response );
       });

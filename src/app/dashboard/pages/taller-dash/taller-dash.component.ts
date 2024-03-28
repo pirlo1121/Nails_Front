@@ -2,8 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-import { TallerDashService } from '../../services/taller-dash.service';
 import { Taller } from 'src/app/interfaces/taller';
+import { TallerService } from 'src/app/services/taller.service';
 
 @Component({
   selector: 'app-taller-dash',
@@ -12,17 +12,17 @@ import { Taller } from 'src/app/interfaces/taller';
 })
 export class TallerDashComponent implements OnInit{
   talleres!: Taller[];
-  
+
   constructor(
     private http: HttpClient,
-    private tallerDashService: TallerDashService,
+    private TallerService: TallerService,
     private router: Router
   ) {}
   ngOnInit(): void {
     this.loadData();
   }
   loadData() {
-    this.tallerDashService.getAllTalleres().subscribe( data => {
+    this.TallerService.getAllTalleres().subscribe( data => {
       console.log(data);
       this.talleres = data.data;
     });
@@ -57,7 +57,7 @@ export class TallerDashComponent implements OnInit{
           icon: "success"
         });
 
-        this.tallerDashService.deleteTaller (id).subscribe( data => {
+        this.TallerService.deleteTaller (id).subscribe( data => {
           console.log( data );
           this.loadData();
         });
