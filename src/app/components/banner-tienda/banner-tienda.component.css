@@ -6,7 +6,7 @@
   justify-content: space-evenly;
   align-items: center;
   margin: 0;
-  padding:10%;
+  padding:5% 10%;
 }
 .text{
   width: 50%;
@@ -21,7 +21,8 @@
 h2 {
   position: relative; /* Para permitir la superposición de elementos */
   display: inline-block; /* Para que el ancho del contenedor se ajuste al contenido */
-  color: rgb(255, 0, 81);
+  /* color: rgb(255, 0, 81); */
+  color: #c81566;
   text-decoration: none; /* Quitamos la decoración de subrayado */
   font-size: 2.5rem;
   font-family: "Cardo", serif;
@@ -30,15 +31,15 @@ h2 {
 }
 
 .text_p{
-  letter-spacing: .8px;
-  font-size: 1.8rem;
-  line-height: 1.4;
+  letter-spacing: .7px;
+  font-size: 1.4rem;
+  line-height: 1.3;
 }
-
 .text_link{
+  text-align: start;
   text-decoration: none;
-  font-size: 1.9rem;
-  color: rgb(229, 0, 0);
+  font-size: 1.6rem;
+  color:  #c81566;
   transition: color 0.3s;
 }
 
@@ -67,7 +68,7 @@ h2::after {
   bottom: 0; /* En la parte inferior del contenedor */
   width: 100%; /* Ancho completo */
   height: 1.4px; /* Altura de la línea */
-  background-color: #bf1717; /* Color de la línea */
+  background-color:  #d6337e; /* Color de la línea */
   transform: scaleX(0); /* Inicialmente la línea no tiene ancho */
   transition: transform 0.3s ease; /* Efecto de transición suave */
 }
@@ -103,7 +104,7 @@ h2:hover::after {
 }
 
 .text_link:hover {
-  color: #e10000; /* Cambia el color del texto al pasar el cursor */
+  color: #b3115a; /* Cambia el color del texto al pasar el cursor */
 }
 
 
