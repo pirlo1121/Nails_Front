@@ -105,3 +105,27 @@ h2:hover::after {
 .text_link:hover {
   color: #e10000; /* Cambia el color del texto al pasar el cursor */
 }
+@media screen and (max-width:768px){
+  .informacion {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+  .text{
+    width: 90%;
+  }
+  h2{
+    font-size: 1.7rem;
+    margin: 2rem 0 0 0;
+  }
+  .text_p{
+    letter-spacing: .6px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  .imagen{
+      width: 95%;
+      height: 200px;
+      margin: 1%;
+  }
+
+}
