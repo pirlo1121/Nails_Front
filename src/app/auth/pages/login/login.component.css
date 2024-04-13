@@ -3,13 +3,13 @@
 }
 
 .form-login {
-  width: 80%; /* Cambiado a 80% para mayor adaptabilidad */
+  width: 90%; /* Cambiado a 90% para mayor adaptabilidad */
   max-width: 400px; /* Limita el ancho máximo para evitar que se estire demasiado en pantallas grandes */
   margin: 1rem auto 1.5rem auto;
-  background-color: #fff;
+  background-color: #fffbfb;
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.256);
 }
 
 h2 {
@@ -23,12 +23,13 @@ label {
 }
 
 .input-field {
-  width: 100%;
+  width: calc(100% - 16px); /* Calcula el ancho teniendo en cuenta el padding */
   padding: 8px;
   font-size: 20px;
   border: 1px solid #ccc;
   border-radius: 4px;
   transition: border-color 0.3s;
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 .field {
