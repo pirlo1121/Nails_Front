@@ -1,17 +1,19 @@
+
 h2{
   text-align: center;
   font-size: 1.4rem;
   margin: .5rem;
-  color:rgb(138, 44, 138);
+  color:#c81566 ;
 }
 
 .form-product {
-  width: 60%;
+  width: 80%;
   margin: 50px auto;
-  background-color: #fff;
+  background-color: #ffffff  ;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* border:solid  #696969 .5px; */
+  box-shadow: 0 5px 10px rgb(98, 98, 98);
 }
 
 /* Estilos para los campos del formulario */
@@ -21,8 +23,9 @@ h2{
 
 label {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 8px;
+  font-weight: bold;
 }
 
 .input-field {
@@ -47,7 +50,7 @@ label {
 
 /* Estilos para el botón de envío */
 .button {
-  background-color: #3498db;
+  background-color: #c81566;
   color: #fff;
   padding: 10px 15px;
   font-size: 16px;
@@ -62,5 +65,12 @@ label {
 }
 
 .button:hover {
-  background-color: #2980b9;
+  background-color: #c81566;
+}
+@media screen and (min-width:768px){
+  .form-product{
+    width: 50%;
+    padding: 30px;
+  }
+
 }
