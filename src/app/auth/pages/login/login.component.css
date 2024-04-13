@@ -1,15 +1,18 @@
-*{
+* {
   min-height: 100%;
 }
+
 .form-login {
-  width: 50%;
-  margin: 1rem  auto 1.5rem auto;
+  width: 80%; /* Cambiado a 80% para mayor adaptabilidad */
+  max-width: 400px; /* Limita el ancho máximo para evitar que se estire demasiado en pantallas grandes */
+  margin: 1rem auto 1.5rem auto;
   background-color: #fff;
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-h2{
+
+h2 {
   font-size: 1.4rem;
 }
 
@@ -27,16 +30,17 @@ label {
   border-radius: 4px;
   transition: border-color 0.3s;
 }
+
 .field {
   margin-bottom: 20px;
   color: black;
   font-size: 1rem;
 }
-.field label{
-  font-size: .8rem;
-  margin: .3rem 0;
-}
 
+.field label {
+  font-size: 0.8rem;
+  margin: 0.3rem 0;
+}
 
 .button {
   background-color: #3498db;
@@ -46,6 +50,7 @@ label {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 100%; /* Ocupa el ancho completo */
 }
 
 .button:disabled {
@@ -56,6 +61,7 @@ label {
 .button:hover {
   background-color: purple;
 }
-.errors{
+
+.errors {
   color: black;
 }
