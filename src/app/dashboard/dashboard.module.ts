@@ -12,6 +12,7 @@ import { NewServiceComponent } from './pages/services/new-service/new-service.co
 import { UpdateServiceComponent } from './pages/services/update-service/update-service.component';
 import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
 import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.component';
+import { DashComponent } from './pages/dash/dash.component';
 
 
 
@@ -27,6 +28,7 @@ import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.co
     UpdateServiceComponent,
     NewTallerComponent,
     TallerDashComponent,
+    DashComponent,
   ],
   imports: [
     CommonModule,

@@ -1,8 +1,6 @@
 <ng-container *ngIf="services && services.length > 0; then serviceList; else noServices"></ng-container>
 
 <ng-template #serviceList>
-  <h3>Servicios registrados</h3>
-
 
     <table>
         <thead>
@@ -41,6 +39,8 @@
       </table>
 
 </ng-template>
+<div class="card-buttons-p"><a routerLink="/dashboard"><button class="button">Back</button></a></div>
+
 
 <ng-template #noServices>
   <h3>No has registrado servicios</h3>
