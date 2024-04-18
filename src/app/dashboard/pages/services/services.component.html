@@ -2,41 +2,43 @@
 
 <ng-template #serviceList>
 
+  <div class="contenedor">
     <table>
-        <thead>
-            <tr class="tri">
-                <th>Preview</th>
-                <th scope="col">Nombre y descripción</th>
-                <th scope="col"> Precio </th>
-                <th scope="col">Editar/Eliminar</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let service of services">
-            <td scope="row">
-                <img class="service_image" [src]="service.urlImage" [alt]="service.name">
-            </td>
-            <td>
-                <h3>{{service.name}}</h3>
-                <p class="service_description">{{service.description}}</p>
-            </td>
-            <td>{{service.price! | currency:'COP':'symbol':'1.0-0' }}</td>
-            <td>
-                <button
-                class="btn btn-update"
-                (click)="updateServiceButton(service._id)">
-            Edit
-            </button>
-            <button
-            class="btn btn-delete"
-            (click)="removeServiceButton(service._id)"
-            >
-            Delete
-           </button>
-            </td>
-            </tr>
-        </tbody>
-      </table>
+      <thead>
+          <tr class="tri">
+              <th>Preview</th>
+              <th scope="col">Nombre y descripción</th>
+              <th scope="col"> Precio </th>
+              <th scope="col">Editar/Eliminar</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let service of services">
+          <td scope="row">
+              <img class="service_image" [src]="service.urlImage" [alt]="service.name">
+          </td>
+          <td>
+              <h3>{{service.name}}</h3>
+              <p class="service_description">{{service.description}}</p>
+          </td>
+          <td>{{service.price! | currency:'COP':'symbol':'1.0-0' }}</td>
+          <td>
+              <button
+              class="btn btn-update"
+              (click)="updateServiceButton(service._id)">
+          Edit
+          </button>
+          <button
+          class="btn btn-delete"
+          (click)="removeServiceButton(service._id)"
+          >
+          Delete
+         </button>
+          </td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
 
 </ng-template>
 <div class="card-buttons-p"><a routerLink="/dashboard"><button class="button">Back</button></a></div>
