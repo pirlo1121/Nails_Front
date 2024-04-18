@@ -14,31 +14,19 @@ import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.co
 import { DashComponent } from './pages/dash/dash.component';
 
 const routes: Routes = [
-  {path: '',component: DashComponent},
-  { path: 'servicios', component: ServicesComponent },
-  { path: 'servicios/new-service', component: NewServiceComponent},
-  { path: 'servicios/update/:id', component: UpdateServiceComponent},
-  { path: 'talleres', component: TallerDashComponent },
-  { path: 'talleres/new', component: NewTallerComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'products/new', component: NewProductComponent },
-  { path: 'products/update/:id', component: UpdateProductComponent },
-  {path: "**", redirectTo: ""},
-
-  {canActivate: [ verifyAuthGuard ]}
-
-  //   children: [
-  //     { path: 'servicios', component: ServicesComponent },
-  //     { path: 'servicios/new-service', component: NewServiceComponent},
-  //     { path: 'servicios/update/:id', component: UpdateServiceComponent},
-  //     { path: 'talleres', component: TallerDashComponent },
-  //     { path: 'talleres/new', component: NewTallerComponent },
-  //     { path: 'products', component: ProductsComponent },
-  //     { path: 'products/new', component: NewProductComponent },
-  //     { path: 'products/update/:id', component: UpdateProductComponent }
-  //   ],
-  //   canActivate: [ verifyAuthGuard ]
-  // }
+  {path: '',component: DashComponent,
+    children: [
+      { path: 'servicios', component: ServicesComponent },
+      { path: 'servicios/new-service', component: NewServiceComponent},
+      { path: 'servicios/update/:id', component: UpdateServiceComponent},
+      { path: 'talleres', component: TallerDashComponent },
+      { path: 'talleres/new', component: NewTallerComponent },
+      { path: 'products', component: ProductsComponent },
+      { path: 'products/new', component: NewProductComponent },
+      { path: 'products/update/:id', component: UpdateProductComponent }
+    ],
+    canActivate: [ verifyAuthGuard ]
+  }
 ];
   @NgModule({
     imports: [RouterModule.forChild(routes)],
