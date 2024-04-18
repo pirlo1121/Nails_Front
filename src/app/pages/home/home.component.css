@@ -12,6 +12,11 @@
 
 }
 .img{
-  margin: 3rem 0;
+  margin-bottom: 3rem;
   border-radius: 3px;
+}
+@media screen and (max-width:768px){
+  .image{
+    width: 100%;
+  }
 }
