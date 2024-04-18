@@ -1,8 +1,11 @@
-
+.contenedor{
+  overflow-x: scroll;
+}
 table {
   width: 90%;
   margin: 0 auto;
   border-collapse: collapse;
+  overflow-x: scroll;
 }
 
 th, td {
@@ -20,7 +23,7 @@ th {
 }
 
 /* Estilos para las imágenes */
-.service__image {
+.service_image {
   width: 100px;
   height: auto;
 }

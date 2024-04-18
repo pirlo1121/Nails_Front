@@ -2,41 +2,41 @@
 </ng-container>
 
 <ng-template #tallerList>
-  <div class="contenido">
-  <table>
-    <thead>
-      <tr class="tri">
-        <th>Vista</th>
-        <th scope="col">Nombre y descripción</th>
-        <th scope="col">Categoría</th>
-        <th scope="col">Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let taller of talleres">
-        <td scope="row">
-          <img class="taller__image" [src]="taller.urlImage" [alt]="taller.name">
-        </td>
-        <td>
-          <h3>{{ taller.name }}</h3>
-          <p class="taller__description">{{ taller.description }}</p>
-        </td>
-        <td>{{ taller.price | currency:'USD':'symbol':'1.0-0' }}</td>
-        <td>
-          <!-- <button
-            class="btn btn-update"
-            (click)="update( taller._id )"
-          >Edit</button> -->
-          <button
-            class="btn btn-delete"
-            (click)="remove( taller._id )"
-          >
-            Delete
-          </button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="contenedor">
+    <table>
+      <thead>
+        <tr class="tri">
+          <th>Vista</th>
+          <th scope="col">Nombre y descripción</th>
+          <th scope="col">Categoría</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let taller of talleres">
+          <td scope="row">
+            <img class="taller__image" [src]="taller.urlImage" [alt]="taller.name">
+          </td>
+          <td>
+            <h3>{{ taller.name }}</h3>
+            <p class="taller__description">{{ taller.description }}</p>
+          </td>
+          <td>{{ taller.price | currency:'USD':'symbol':'1.0-0' }}</td>
+          <td>
+            <!-- <button
+              class="btn btn-update"
+              (click)="update( taller._id )"
+            >Edit</button> -->
+            <button
+              class="btn btn-delete"
+              (click)="remove( taller._id )"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 </div>
 
 

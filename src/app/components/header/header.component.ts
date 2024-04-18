@@ -31,7 +31,7 @@ export class HeaderComponent {
       }
 
       // Bonus
-      const navbarLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.navbar a');
+      const navbarLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.links_menu');
       navbarLinks.forEach(link => {
         link.addEventListener('click', (e: Event) => {
           navbar.classList.toggle('show-nav');

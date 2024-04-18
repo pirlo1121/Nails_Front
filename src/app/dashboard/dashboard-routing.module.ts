@@ -23,7 +23,9 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'products/new', component: NewProductComponent },
   { path: 'products/update/:id', component: UpdateProductComponent },
-  // {canActivate: [ verifyAuthGuard ]}
+  {path: "**", redirectTo: ""},
+
+  {canActivate: [ verifyAuthGuard ]}
 
   //   children: [
   //     { path: 'servicios', component: ServicesComponent },
