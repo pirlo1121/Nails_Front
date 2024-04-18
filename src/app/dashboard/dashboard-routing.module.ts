@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { verifyAuthGuard } from '../guards/verify-auth.guard';
-// import { MainComponent } from './pages/main/main.component';
+import { MainComponent } from './pages/main/main.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { TallerDashComponent } from './pages/taller-dash/taller-dash.component';
 import { ProductsComponent } from './pages/products/products.component';
@@ -14,7 +14,8 @@ import { NewTallerComponent } from './pages/taller-dash/new-taller/new-taller.co
 import { DashComponent } from './pages/dash/dash.component';
 
 const routes: Routes = [
-  {path: '',component: DashComponent,
+  {
+    path: '',component: MainComponent,
     children: [
       { path: 'servicios', component: ServicesComponent },
       { path: 'servicios/new-service', component: NewServiceComponent},
