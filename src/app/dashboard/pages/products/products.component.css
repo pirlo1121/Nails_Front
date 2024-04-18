@@ -3,6 +3,8 @@ table {
   width: 90%;
   margin: 0 auto;
   border-collapse: collapse;
+  overflow-x: scroll;
+
 }
 
 th, td {
