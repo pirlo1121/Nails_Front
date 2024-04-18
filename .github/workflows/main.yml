@@ -5,6 +5,7 @@ on:
     branches:
       - test
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,6 +28,7 @@ jobs:
       - name: List dist files
         run: ls && cd dist && ls
 
+
       - name: Configure AWS CLI
         run: |
           mkdir -p ~/.aws
@@ -35,8 +37,11 @@ jobs:
           echo "aws_secret_access_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> ~/.aws/config
           echo "region = us-east-2" >> ~/.aws/config
 
+
       - name: aws s3 delete bucket archives
         run: aws s3 rm s3://nails-bit --recursive
 
       - name: aws s3 upload archives
         run: aws s3 cp dist/nailsstudiofinalfrontend s3://nails-bit --recursive
+
+

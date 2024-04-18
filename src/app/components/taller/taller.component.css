@@ -16,15 +16,16 @@
   width: 100%;
   max-height: 330px;
   border-radius: 4px;
-  margin-left: 100px;
-  margin-right: 100px; /* Espacio entre la imagen y los otros elementos */
 }
 
 /* Estilos para la mitad derecha que contiene la información del taller */
 .taller-info {
   flex: 1;
-  padding: 0 10px; /* Ajusta el relleno según tus necesidades */
-  max-width: 60%; /* Ancho máximo para el contenido de la parte derecha */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  max-width: 60%;
 }
 
 .taller-title {
@@ -42,22 +43,25 @@ h3 {
   cursor: pointer;
 }
 
-
 .taller-text {
   letter-spacing: .8px;
   font-size: 1rem;
   line-height: 1.4;
   text-align: justify;
+  margin-left: 20px; /* Espacio entre la imagen y el texto */
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
 }
 
 .taller-btn {
   background-color: rgb(255, 6, 68); /* Color de fondo del botón */
   color: white;
-  padding: 10px 15px;
+  padding: 10px 15px; /* Tamaño del padding original */
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 16px; /* Tamaño de fuente original */
+  width: 150px; /* Ancho automático */
+  margin: auto;
 }
 
 /* Estilos para hacerlo responsivo */
