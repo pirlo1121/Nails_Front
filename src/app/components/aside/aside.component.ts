@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AsideComponent {
 
-
-  toggleMenu(): void {
-    const asideMenu = document.getElementById('aside-menu') as HTMLDivElement;
-    asideMenu.style.display = asideMenu.style.display === 'block' ? 'none' : 'block';
-  }
-
 }

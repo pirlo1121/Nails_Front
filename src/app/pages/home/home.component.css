@@ -1,5 +1,6 @@
 .contenedor{
   background: rgb(255, 255, 255);
+
   box-shadow: rgba(225, 210, 221, 0.25)0px 30px 60px -12px inset, rgba(201, 197, 197, 0.3) 0px 18px 36px -18px inset;
 }
 .image{

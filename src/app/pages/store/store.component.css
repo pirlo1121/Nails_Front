@@ -46,9 +46,10 @@ h2 {
 }
 .shopping{
   position: fixed;
+  position: absolute;
   cursor: pointer;
   right: 0;
-  margin: 1rem;
+  margin: .7rem;
 }
 .carrito-img{
   background-color: transparent;
