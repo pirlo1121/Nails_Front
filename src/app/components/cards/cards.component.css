@@ -3,7 +3,11 @@
   width: 100vw;
 } */
 
+*{
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
+}
 .card-price {
   display: block;
   margin: 0.5rem;
