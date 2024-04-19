@@ -1,6 +1,6 @@
 .informacion{
   text-align: center;
-  padding:0 10%;
+  padding:0% 10%;
   background-color: rgb(244, 244, 244);
 }
 .text{
@@ -99,6 +99,7 @@ h2:hover::after {
   .informacion{
     display: flex;
     align-items: center;
+    padding:5% 10%;
   }
   h2{
     font-size: 1.9rem;

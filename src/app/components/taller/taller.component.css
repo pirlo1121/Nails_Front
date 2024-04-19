@@ -35,7 +35,8 @@
 }
 
 h3 {
-  color: rgb(255, 0, 0);
+  color: #c81566 ;
+  font-weight: bold;
   text-decoration: none;
   font-size: 1.5rem;
   font-family: "Cardo", serif;
@@ -53,7 +54,7 @@ h3 {
 }
 
 .taller-btn {
-  background-color: rgb(255, 6, 68); /* Color de fondo del botón */
+  background-color: #c81566 ; /* Color de fondo del botón */
   color: white;
   padding: 10px 15px; /* Tamaño del padding original */
   border: none;
