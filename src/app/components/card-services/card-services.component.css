@@ -61,7 +61,7 @@
 .card-price {
   font-size: 16px;
   font-weight: bold;
-  color: #f03ed8;
+  color: #d6337e  ;
 }
 
 .card-action {
@@ -70,7 +70,7 @@
 }
 
 .card-action{
-  background-color: #da62ac;
+  background-color: #d6337e  ;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -81,5 +81,5 @@
 }
 
 .card-action:hover {
-  background-color: #894DAD;
+  background-color: #d6337e  ;
 }

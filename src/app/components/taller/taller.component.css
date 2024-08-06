@@ -1,48 +1,68 @@
-
 .taller {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  max-width: 100%;
-  margin: 2rem;
+  margin: 0;
+  padding: 5% 10%;
 }
-.img {
-  flex: 1;
-  margin: 1rem 0;
-}
+
+/* .img {
+  height: 100px;
+} */
 
 .img-taller {
-  max-width: 500px;
+  max-width: 390px;
   width: 100%;
-  height: 350px;
-  border-radius: 3px;
+  max-height: 330px;
+  border-radius: 4px;
 }
 
 /* Estilos para la mitad derecha que contiene la información del taller */
 .taller-info {
   flex: 1;
-  padding: 0 10px; /* Ajusta el relleno según tus necesidades */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+  max-width: 60%;
 }
 
 .taller-title {
-  color: rgb(145, 0, 145);
-  font-size: 1.7em;
-  margin-bottom: 10px;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+h3 {
+  color: #c81566 ;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: "Cardo", serif;
+  padding-bottom: 5px;
+  cursor: pointer;
 }
 
 .taller-text {
-  line-height: 1.5;
+  letter-spacing: .8px;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: justify;
+  margin-left: 20px; /* Espacio entre la imagen y el texto */
+  margin-right: 20px; /* Espacio entre la imagen y el texto */
 }
 
 .taller-btn {
-  background-color: rgb(184, 0, 184); /* Color de fondo del botón */
+  background-color: #c81566 ; /* Color de fondo del botón */
   color: white;
-  padding: 10px 15px;
+  padding: 10px 15px; /* Tamaño del padding original */
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 16px; /* Tamaño de fuente original */
+  width: 150px; /* Ancho automático */
+  margin: auto;
 }
 
 /* Estilos para hacerlo responsivo */
@@ -53,8 +73,13 @@
 
   .img,
   .taller-info {
-    flex: 1;
-    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding:10%;
   }
   .taller-title{
     font-size: 1.1rem;

@@ -1,10 +1,9 @@
-<p>update-service works!</p>
+
 <form class="form form-service"
       [formGroup]="serviceForm"
       (ngSubmit)="updateService()"
       autocomplete="off">
   <h2>Actualiza Servicio</h2>
-  <p>Diligencia cada uno de los campos según sean requeridos.</p>
   <div class="field">
     <label for="name">Titulo</label>
     <input
@@ -28,7 +27,7 @@
     </div>
   </div>
 
-  
+
   <div class="field">
     <label for="price">Precio</label>
     <input
@@ -70,7 +69,7 @@
     </div>
   </div>
 
-  
+
   <div class="field">
     <label for="description">Descripción</label>
     <textarea
@@ -101,4 +100,6 @@
       [disabled]="serviceForm.invalid"
     >Actualizar Servicio</button>
   </div>
+  <div class="card-buttons-p"><a routerLink="/dashboard"><button class="button">Back</button></a></div>
+
 </form>

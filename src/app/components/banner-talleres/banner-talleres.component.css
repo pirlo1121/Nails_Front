@@ -1,0 +1,128 @@
+.informacion{
+  text-align: center;
+  padding:5% 10%;
+  background-color: rgb(255, 255, 255);
+}
+.text{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+  position: relative; /* Para permitir la superposición de elementos */
+  display: inline-block; /* Para que el ancho del contenedor se ajuste al contenido */
+  /* color: rgb(255, 0, 81); */
+  color: #c81566;
+  text-decoration: none; /* Quitamos la decoración de subrayado */
+  font-family: "Cardo", serif;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.text_p{
+  text-align: justify;
+  font-size: 1.3rem;
+  letter-spacing: .7px;
+  line-height: 1.3;
+}
+.text_link{
+  text-align: start;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color:  #c81566;
+  transition: color 0.3s;
+  display: none;
+}
+.imagen{
+  width: 100%;
+  height: 280px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.img{
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+}
+
+  /* ANIMACIONES */
+
+h2::after {
+  content: ''; /* Contenido generado después del texto */
+  position: absolute; /* Posicionamiento absoluto para superponerlo al texto */
+  left: 0; /* Inicia desde la izquierda del contenedor */
+  bottom: 0; /* En la parte inferior del contenedor */
+  width: 100%; /* Ancho completo */
+  height: 1.4px; /* Altura de la línea */
+  background-color:  #d6337e; /* Color de la línea */
+  transform: scaleX(0); /* Inicialmente la línea no tiene ancho */
+  transition: transform 0.3s ease; /* Efecto de transición suave */
+}
+
+h2:hover::after {
+  transform: scaleX(1);
+}
+
+.text_link:hover {
+  color: #b3115a;
+}
+.revelar-texto {
+  position: relative;
+  display: inline-block;
+  color: #333;
+  overflow: hidden; /* Oculta el texto que se revelará */
+}
+
+.imagen::after {
+  content: attr(data-texto); /* Contenido del atributo data-texto */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 15%; /* El texto ocupa el 50% de la altura de la imagen */
+  background-color: rgba(0, 0, 0, 0.712); /* Color de fondo semitransparente */
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease;
+  transform: translateY(100%); /* Empieza fuera de la vista */
+ }
+
+.imagen:hover::after {
+  transform: translateY(0); /* Muestra el texto al pasar el cursor */
+}
+
+
+
+/* media quaries */
+@media screen and (min-width:768px){
+  .informacion{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  h2{
+    font-size: 1.9rem;
+  }
+  .text{
+    padding: 10px;
+    width: 50%;
+  }
+  .text_p{
+    font-size: 1.5rem;
+  }
+  .text_link{
+  font-size: 1.5rem;
+
+  }
+  .imagen{
+    width: 45%;
+    margin-right: 5%;
+    height: 360px;
+  }
+  .text_link{
+    display: block;
+  }
+
+
+}

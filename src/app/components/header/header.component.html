@@ -1,19 +1,16 @@
-<header class="header">
-  <div class="menu_icon"[class.menu_icon_Class]="menu_icon_variable" (click)="openMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-    <div class="logo-header">
-      <a routerLink="/"><img src="../../../assets/images/logo-inicial.png" alt="Logotipo inicial de la marca"></a>
-    </div>
-      <div>
-        <ul class="nav-links" [class.menuClass]="menuVariable">
-          <li><a routerLink="/tienda">Tienda</a></li>
-          <li><a routerLink="/talleres">Talleres  </a></li>
-          <li><a routerLink="/servicios">Servicios</a></li>
-        </ul>
-      </div>
-      <a routerLink="/agenda-una-cita" class="btn"><button>Agendar</button></a>
-  </header>
-
+<nav class="navbar dark-mode" role="navigation">
+  <button class="burger">
+    <span class="bar"></span>
+  </button>
+  <ul><li><a routerLink="/home"><img class="logo" src="https://i.pinimg.com/originals/4f/08/e4/4f08e42712f364661206ef3e894ea6c1.png" alt=""> </a></li></ul>
+  <ul class="navbar__links">
+    <li class="navbar__link first"><a class="links_menu" routerLink="/tienda">TIENDA</a></li>
+    <li class="navbar__link second"><a class="links_menu" routerLink="/talleres">TALLERES</a></li>
+    <li class="navbar__link third"><a class="links_menu" routerLink="/servicios">SERVICIOS</a></li>
+  </ul>
+  <ul class="redes">
+    <a href="https://www.facebook.com/" class="redes_link"><img class="redes-img" src="https://i.pinimg.com/originals/34/43/30/34433032ec57ef0e5486af62588a5a70.png" alt=""></a>
+    <a href="https://www.instagram.com/" class="redes_link"><img class="redes-img" src="https://i.pinimg.com/originals/fa/90/e1/fa90e1e7734e5bef1193daca074ad67c.png" alt=""></a>
+    <a href="https://www.youtube.com/" class="redes_link"><img class="redes-img youtube" src="https://i.pinimg.com/originals/72/11/fb/7211fbb00bce8645fb9fbd825dcc502f.png" alt=""></a>
+  </ul>
+</nav>

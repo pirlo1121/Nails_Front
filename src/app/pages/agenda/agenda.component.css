@@ -5,18 +5,22 @@
 .mensaje-agenda{
         display: flex;
         justify-content: center;
-        background-color: #f27e938e;
+        background-color: #ff8cc4 ;
         margin: 1rem;
         height: 7rem;
+        font-size: 1.2rem;
         align-items: center;
-        background-image: url(../../../assets/images/patron.webp);
-        background-repeat: repeat;
+        /* font-weight: bold; */
+}
+b {
+  font-weight: bold;
+
 }
 .mensaje-agenda-outter{
     display: flex;
     justify-content: center;
     padding: 1rem;
-    
+
 }
 .contenedor-agenda-outter{
     min-height: 40rem;

@@ -1,8 +1,9 @@
 <div class="container">
     <app-aside class="aside"></app-aside>
     <div class="shopping" (click)="opencarrito()">
-      <img  class="carrito-img" src="../../../assets/images/store/carrito.png" >
       <span class="contador-carrito" *ngIf="contador>=1">{{contador}}</span>
+      <img  class="carrito-img" src="https://i.pinimg.com/originals/cd/e0/2e/cde02e9c1f99f84afbcc91601d1e0225.png" >
+      <!-- <span class="contador-carrito" *ngIf="contador>=1">{{contador}}</span> -->
     </div>
     <div class="cards">
         <app-cards
@@ -13,9 +14,6 @@
         </app-cards>
     </div>
 <div>
-<!-- <div class="shopping" (click)="opencarrito()">
-  <img  class="carrito-img" src="../../../assets/images/store/carrito.png">
-</div> -->
 
 <div class="carrito" *ngIf="modal == true">
   <app-car></app-car>

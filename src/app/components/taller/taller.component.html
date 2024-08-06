@@ -1,4 +1,40 @@
-<div class="taller"
+<div class="taller" *ngFor="let taller of talleres; let i = index">
+    <ng-container *ngIf="i % 2 === 0; else evenContent">
+        <!-- Imagen a la izquierda -->
+        <div class="img">
+            <img class="img-taller" [src]="taller.urlImage" alt="">
+        </div>
+        <div class="taller-info">
+            <h3 class="taller-title">{{taller.name}}</h3>
+            <br>
+            <p class="taller-text">{{taller.description}}</p>
+            <br>
+            <p class="taller-text">{{taller.price}}</p>
+            <br>
+            <button class="taller-btn">Más información</button>
+        </div>
+    </ng-container>
+    <ng-template #evenContent>
+        <!-- Imagen a la derecha -->
+        <div class="taller-info">
+            <h3 class="taller-title">{{taller.name}}</h3>
+            <br>
+            <p class="taller-text">{{taller.description}}</p>
+            <br>
+            <p class="taller-text">{{taller.price}}</p>
+            <br>
+            <button class="taller-btn">Más información</button>
+        </div>
+        <div class="img">
+            <img class="img-taller" [src]="taller.urlImage" alt="">
+        </div>
+    </ng-template>
+</div>
+
+
+
+
+<!-- <div class="taller"
     *ngFor="let taller of talleres"
 >
     <div class="img">
@@ -10,4 +46,4 @@
         <p class="taller-text">{{taller.price}}</p> <br>
         <button class="taller-btn"> más informacion</button>
     </div>
-</div>
+</div> -->
