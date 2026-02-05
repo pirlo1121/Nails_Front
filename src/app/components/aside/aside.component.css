@@ -1,150 +1,111 @@
- .aside {
-  background: linear-gradient(135deg, #d6337e 0%, #c81566 100%);
-  padding: 12px 20px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  box-shadow: 0 2px 8px rgba(200, 21, 102, 0.2);
- }
-
-.aside-list {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  list-style: none;
+.search-container {
+  width: 100%;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.search {
+.search-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
   position: relative;
-  width: 320px;
   display: flex;
   align-items: center;
+  background: white;
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 4px 16px rgba(214, 51, 126, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.search-wrapper:focus-within {
+  box-shadow: 0 6px 24px rgba(214, 51, 126, 0.2);
+  border-color: #d6337e;
+  transform: translateY(-2px);
 }
 
 .search-icon {
-  position: absolute;
-  left: 12px;
-  font-size: 16px;
-  color: #999;
-  pointer-events: none;
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d6337e;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
 }
 
 .search-input {
-  width: 100%;
-  padding: 10px 40px 10px 40px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 25px;
+  flex: 1;
+  border: none;
   outline: none;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.95);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-input:focus {
-  border-color: #66afe9;
-  background: white;
-  box-shadow: 0 4px 12px rgba(102, 175, 233, 0.3);
-  transform: translateY(-1px);
+  font-size: 1rem;
+  color: #333;
+  background: transparent;
+  padding: 0.25rem 0;
+  font-family: inherit;
 }
 
 .search-input::placeholder {
   color: #999;
+  font-weight: 400;
 }
 
 .clear-btn {
-  position: absolute;
-  right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 18px;
-  color: #999;
-  cursor: pointer;
-  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  border: none;
+  background: #f0f0f0;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
 }
 
 .clear-btn:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: #d6337e;
-}
-
-.aside-link {
-  text-decoration: none;
+  background: #d6337e;
   color: white;
-  margin: 0 0.5rem;
-  font-size: 1.05rem;
-  transition: all 0.3s ease;
-  padding: 5px 10px;
-  border-radius: 4px;
-  position: relative;
+  transform: scale(1.1);
 }
 
-.aside-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: wheat;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+.clear-btn:active {
+  transform: scale(0.95);
 }
 
-.aside-link:hover {
-  color: wheat;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.aside-link:hover::after {
-  width: 80%;
-}
-
-@media screen and (max-width: 768px) {
-  .aside {
-    background: linear-gradient(135deg, #d6337e 0%, #c81566 100%);
-    flex-direction: column;
-    padding: 15px 10px;
-    gap: 15px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-container {
+    padding: 1rem 0.75rem;
   }
-  
-  .aside-list {
-    display: none;
+
+  .search-wrapper {
+    padding: 0.6rem 1.2rem;
   }
-  
-  .search {
-    width: 100%;
-    max-width: 400px;
+
+  .search-input {
+    font-size: 0.95rem;
   }
-  
-  .aside-link {
-    margin: 0 0.3rem;
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .search-wrapper {
+    padding: 0.5rem 1rem;
+  }
+
+  .search-input {
     font-size: 0.9rem;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .search {
-    max-width: 280px;
-  }
-  
-  .search-input {
-    font-size: 13px;
-    padding: 8px 35px 8px 35px;
-  }
-  
-  .search-icon {
-    font-size: 14px;
-    left: 10px;
+  .clear-btn {
+    width: 24px;
+    height: 24px;
   }
 }
-
