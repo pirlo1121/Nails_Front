@@ -6,6 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  token: any = '';
+
+  ngOnInit(){
+    this.token = localStorage.getItem('token');
+    console.log(this.token)
+  }
+
   ngAfterViewInit(): void {
     this.toggleMenu();
   }
@@ -38,4 +45,11 @@ export class HeaderComponent {
         });
       });
     }
-  }}
+  }
+
+ logout(){
+  localStorage.removeItem('token');
+  this.ngOnInit();
+
+ }
+}

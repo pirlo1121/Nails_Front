@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./dash.component.css']
 })
 export class DashComponent {
+  token: any = ''
 
+  ngOnInit(){
+    this.token = localStorage.getItem('token');
+  }
 }

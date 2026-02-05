@@ -13,7 +13,7 @@ import { ValidateFormsService } from 'src/app/services/validate-forms.service';
   styleUrls: ['./update-service.component.css']
 })
 export class UpdateServiceComponent implements OnInit {
- 
+
   serviceForm: FormGroup = this.formBuilder.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
     price: ['', [Validators.required, this.validateForm.validatePrice]],
@@ -29,8 +29,8 @@ export class UpdateServiceComponent implements OnInit {
     private router: Router,
     private validateForm: ValidateFormsService,
     private activatedRoute: ActivatedRoute
-  ) {}
-    
+  ) { }
+
   ngOnInit() {
     this.activatedRoute.params
       .pipe(
@@ -42,9 +42,9 @@ export class UpdateServiceComponent implements OnInit {
       )
       .subscribe(id => {
         console.log(id);
-        this.serviceId = id; 
+        this.serviceId = id;
 
-        this.servicesService.getServiceById(id).subscribe((data: any) => {
+        this.servicesService.getServiceById(id).subscribe((data: Service) => {
           console.log(data);
 
           const { name, description, price, urlImage } = data;

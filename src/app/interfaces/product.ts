@@ -13,3 +13,5 @@ export interface Product {
     __v?: number;
     _id: string
 }
+
+// Router.get('/register',verificartoken ,registrarUsuario)

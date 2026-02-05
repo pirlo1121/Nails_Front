@@ -1,23 +1,40 @@
 <div class="container">
-    <app-aside class="aside"></app-aside>
-    <div class="shopping" (click)="opencarrito()">
-      <span class="contador-carrito" *ngIf="contador>=1">{{contador}}</span>
-      <img  class="carrito-img" src="https://i.pinimg.com/originals/cd/e0/2e/cde02e9c1f99f84afbcc91601d1e0225.png" >
-      <!-- <span class="contador-carrito" *ngIf="contador>=1">{{contador}}</span> -->
-    </div>
-    <div class="cards">
-        <app-cards
-          class="card"
-          *ngFor="let product of products"
-          [products]="product"
-          (dataProduct)="addProduct( $event )">
-        </app-cards>
-    </div>
-<div>
+  <app-aside class="aside" (searchChange)="onSearchChange($event)"></app-aside>
+
+  <div class="shopping" (click)="opencarrito()">
+    <span class="contador-carrito" *ngIf="contador>=1">{{contador}}</span>
+    <img class="carrito-img" src="https://i.pinimg.com/originals/cd/e0/2e/cde02e9c1f99f84afbcc91601d1e0225.png"
+      alt="Carrito de compras">
+  </div>
+
+  <!-- Loading State -->
+  <div class="loading-container" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Cargando productos...</p>
+  </div>
+
+  <!-- Error State -->
+  <div class="error-container" *ngIf="hasError && !isLoading">
+    <div class="error-icon">⚠️</div>
+    <h3>No se pudieron cargar los productos</h3>
+    <p>Por favor, asegúrate de que el servidor backend esté corriendo.</p>
+  </div>
+
+  <!-- Empty Search Results -->
+  <div class="empty-container" *ngIf="!isLoading && !hasError && filteredProducts.length === 0 && products.length > 0">
+    <div class="empty-icon">🔍</div>
+    <h3>No se encontraron productos</h3>
+    <p>Intenta con otra búsqueda</p>
+  </div>
+
+  <!-- Products Grid -->
+  <div class="cards" *ngIf="!isLoading && !hasError && filteredProducts.length > 0">
+    <app-cards class="card" *ngFor="let product of filteredProducts" [products]="product"
+      (dataProduct)="addProduct( $event )">
+    </app-cards>
+  </div>
+</div>
 
 <div class="carrito" *ngIf="modal == true">
   <app-car></app-car>
 </div>
-
-
-

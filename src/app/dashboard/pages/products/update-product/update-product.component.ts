@@ -20,12 +20,12 @@ export class UpdateProductComponent {
     { name: 'Frutas', value: 'frutas' }
   ];
   productForm: FormGroup = this.formBuilder.group({
-    name: [ '', [ Validators.required, Validators.minLength( 3 ) ] ],
-    price: [ '', [ Validators.required, this.validateForm.validatePrice ] ],
-    quantity: [ '', [ Validators.required, this.validateForm.validateQuantity ] ],
-    urlImage: [ '', this.validateForm.validateNormalUrl ],
-    category: [ '' ],
-    description: [ '', [ this.validateForm.validateDescription ] ]
+    name: ['', [Validators.required, Validators.minLength(3)]],
+    price: ['', [Validators.required, this.validateForm.validatePrice]],
+    quantity: ['', [Validators.required, this.validateForm.validateQuantity]],
+    urlImage: ['', this.validateForm.validateNormalUrl],
+    category: [''],
+    description: ['', [this.validateForm.validateDescription]]
   });
   productId!: string;
 
@@ -36,24 +36,24 @@ export class UpdateProductComponent {
     private router: Router,
     private validateForm: ValidateFormsService,
     private activatedRoute: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.activatedRoute.params
       .pipe(
-        tap( response => {
-          console.log( response );
+        tap(response => {
+          console.log(response);
 
           return response;
         }),
-        map( response => response[ 'id' ] )
-      ).subscribe( id  => {
-        console.log( id );      /// Extraemos de la URL
+        map(response => response['id'])
+      ).subscribe(id => {
+        console.log(id);      /// Extraemos de la URL
 
         this.productId = id;
 
-        this.productService.getProductById( id ).subscribe( ( data: any ) => {
-          console.log( data );
+        this.productService.getProductById(id).subscribe((data: Product) => {
+          console.log(data);
 
           const { name, description, price, quantity, urlImage, category } = data;
 
@@ -71,11 +71,11 @@ export class UpdateProductComponent {
   }
 
   updateProduct() {
-    console.log( this.productForm.value );
+    console.log(this.productForm.value);
 
-    this.productService.updateProduct( this.productId, this.productForm.value )
-      .subscribe( data => {
-        console.log( data );
+    this.productService.updateProduct(this.productId, this.productForm.value)
+      .subscribe(data => {
+        console.log(data);
 
         this.productForm.reset();
 
@@ -87,7 +87,7 @@ export class UpdateProductComponent {
           timer: 1500
         });
 
-        this.router.navigate( [ 'dashboard', 'products' ] );   //  /dashboard/products
+        this.router.navigate(['dashboard', 'products']);   //  /dashboard/products
       });
   }
 }

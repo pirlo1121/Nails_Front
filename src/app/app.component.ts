@@ -8,11 +8,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'nailsstudiofinalfrontend';
-  isLoggedIn: any = undefined;
-
-  ngOnInit(){
-    console.log(this.user)
-  }
+  isLoggedIn: boolean = false;
 
   constructor( public authService: AuthService ) {
     if (this.authService.user.hasOwnProperty("role")) {

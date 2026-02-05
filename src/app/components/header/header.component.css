@@ -1,15 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-
-/* .light-mode {
-  --navbar-color: #222;
-  --navbar-bg-color: #F0F0F0;
-} */
 .dark-mode {
   --navbar-color: #3b3b3b;
   --navbar-bg-color: rgb(255, 255, 255);
-
-
 }
 
 ul {
@@ -37,15 +30,16 @@ ul {
   color:var(--navbar-color);
 
 }
+/* .navbar__logout{} */
 .navbar__links {
   display:flex;
   margin: .5rem 0
-  /* justify-content: space-between; */
 }
 .navbar__link {
   margin: .3rem 0;
   padding:0 10px;
   margin: 0 1rem;
+  cursor: pointer;
 }
 .links_menu{
   color:var(--navbar-color);
@@ -71,7 +65,7 @@ ul {
   width: 1.7rem;
 
 }
-/*  Small device */
+
 @media screen and (max-width:767.98px) {
   .navbar__links {
     margin: .4rem 0;

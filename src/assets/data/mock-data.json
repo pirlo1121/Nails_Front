@@ -1,0 +1,256 @@
+{
+    "products": [
+        {
+            "_id": "prod001",
+            "name": "Esmalte de Uñas Semi-permanente Rojo Rubí",
+            "category": "Esmaltes",
+            "price": 45000,
+            "quantity": 50,
+            "count": 50,
+            "description": "Esmalte de uñas de larga duración con acabado brillante. Color rojo intenso que dura hasta 3 semanas sin descascararse.",
+            "urlImage": "https://i.pinimg.com/736x/e9/38/36/e93836e510ab80e701899800512fc3de.jpg",
+            "userId": "user123",
+            "createdAt": "2024-01-15T10:30:00Z",
+            "updatedAt": "2024-02-01T14:20:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod002",
+            "name": "Kit Profesional de Manicure",
+            "category": "Kits",
+            "price": 120000,
+            "quantity": 25,
+            "count": 25,
+            "description": "Kit completo con lima, cortauñas, tijeras, empujador de cutícula y pinzas de precisión. Todo en acero inoxidable.",
+            "urlImage": "https://i.pinimg.com/1200x/1d/23/9e/1d239e1c2e5f781480365bd438c0aaa4.jpg",
+            "userId": "user123",
+            "createdAt": "2024-01-18T09:15:00Z",
+            "updatedAt": "2024-01-30T16:45:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod003",
+            "name": "Aceite Nutritivo para Cutículas",
+            "category": "Cuidado",
+            "price": 28000,
+            "quantity": 100,
+            "count": 100,
+            "description": "Aceite enriquecido con vitamina E y aceite de argán para nutrir y fortalecer las cutículas y uñas.",
+            "urlImage": "https://i.pinimg.com/1200x/e8/73/a4/e873a445efd56d7b6450fca5e0987a99.jpg",
+            "userId": "user123",
+            "createdAt": "2024-01-20T11:00:00Z",
+            "updatedAt": "2024-02-02T08:30:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod004",
+            "name": "Esmalte Gel Nude Natural",
+            "category": "Esmaltes",
+            "price": 42000,
+            "quantity": 60,
+            "count": 60,
+            "description": "Esmalte gel de color nude elegante, perfecto para un look profesional y natural.",
+            "urlImage": "https://i.pinimg.com/736x/50/dc/ea/50dcea520b6e4308a903ab3ac6db9dd4.jpg",
+            "userId": "user123",
+            "createdAt": "2024-01-22T13:30:00Z",
+            "updatedAt": "2024-02-03T10:15:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod005",
+            "name": "Lámpara LED UV para Uñas",
+            "category": "Equipos",
+            "price": 180000,
+            "quantity": 15,
+            "count": 15,
+            "description": "Lámpara LED profesional con temporizador automático de 30/60/90 segundos. Ideal para secar esmalte gel y semi-permanente.",
+            "urlImage": "https://i.pinimg.com/1200x/21/f6/9a/21f69a3a837aeaad8612b6632a798abe.jpg",
+            "userId": "user123",
+            "createdAt": "2024-01-25T15:45:00Z",
+            "updatedAt": "2024-02-04T12:00:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod006",
+            "name": "Removedor de Esmalte Sin Acetona",
+            "category": "Removedores",
+            "price": 18000,
+            "quantity": 80,
+            "count": 80,
+            "description": "Removedor suave sin acetona enriquecido con vitaminas. No daña ni reseca las uñas.",
+            "urlImage": "https://i.pinimg.com/1200x/12/cb/5b/12cb5b68ab4dda9856eed8b61375cc55.jpg",
+            "userId": "user123",
+            "createdAt": "2024-01-28T09:00:00Z",
+            "updatedAt": "2024-02-05T07:30:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod007",
+            "name": "Esmalte Brillante Rosa Pastel",
+            "category": "Esmaltes",
+            "price": 38000,
+            "quantity": 70,
+            "count": 70,
+            "description": "Esmalte de secado rápido en tono rosa pastel con acabado brillante y duradero.",
+            "urlImage": "https://i.pinimg.com/736x/d9/77/8f/d9778f05f838d8c8c78d7fb30d0b916a.jpg",
+            "userId": "user123",
+            "createdAt": "2024-02-01T10:30:00Z",
+            "updatedAt": "2024-02-05T09:15:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod008",
+            "name": "Base Coat Fortalecedora",
+            "category": "Bases y Top Coat",
+            "price": 35000,
+            "quantity": 45,
+            "count": 45,
+            "description": "Base transparente que fortalece las uñas débiles y quebradizas. Prepara la superficie para una mejor adherencia del esmalte.",
+            "urlImage": "https://i.pinimg.com/1200x/c0/08/97/c0089710ca73d27295b957c5bb95706c.jpg",
+            "userId": "user123",
+            "createdAt": "2024-02-02T14:20:00Z",
+            "updatedAt": "2024-02-05T08:45:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod009",
+            "name": "Decoraciones para Uñas - Cristales",
+            "category": "Decoraciones",
+            "price": 22000,
+            "quantity": 120,
+            "count": 120,
+            "description": "Set de cristales decorativos en diferentes tamaños y colores para nail art. Incluye 500 piezas.",
+            "urlImage": "https://i.pinimg.com/736x/f2/71/8b/f2718bbda4e27b34667c4b60f546263a.jpg",
+            "userId": "user123",
+            "createdAt": "2024-02-03T11:00:00Z",
+            "updatedAt": "2024-02-05T10:00:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod010",
+            "name": "Esmalte Efecto Mate Negro",
+            "category": "Esmaltes",
+            "price": 48000,
+            "quantity": 35,
+            "count": 35,
+            "description": "Esmalte de acabado mate en tono negro profundo. Ideal para un look sofisticado y moderno.",
+            "urlImage": "https://i.pinimg.com/736x/a9/f1/93/a9f193488113d74555cc6c3e6a15dfb6.jpg",
+            "userId": "user123",
+            "createdAt": "2024-02-04T16:30:00Z",
+            "updatedAt": "2024-02-05T09:00:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod011",
+            "name": "Lima de Cristal Profesional",
+            "category": "Herramientas",
+            "price": 32000,
+            "quantity": 55,
+            "count": 55,
+            "description": "Lima de cristal de doble cara que no daña las uñas. Duradera y fácil de limpiar.",
+            "urlImage": "https://i.pinimg.com/1200x/f4/2e/f7/f42ef7c4a348ca822d11c860c5985291.jpg",
+            "userId": "user123",
+            "createdAt": "2024-02-05T08:00:00Z",
+            "updatedAt": "2024-02-05T10:30:00Z",
+            "__v": 0
+        },
+        {
+            "_id": "prod012",
+            "name": "Top Coat Efecto Espejo",
+            "category": "Bases y Top Coat",
+            "price": 52000,
+            "quantity": 40,
+            "count": 40,
+            "description": "Top coat de alta calidad que proporciona un acabado ultra brillante tipo espejo. Sella y protege el color.",
+            "urlImage": "https://i.pinimg.com/736x/47/ae/59/47ae59337171f760b9e6e4ccfd4e8305.jpg",
+            "userId": "user123",
+            "createdAt": "2024-02-05T10:15:00Z",
+            "updatedAt": "2024-02-05T10:30:00Z",
+            "__v": 0
+        }
+    ],
+    "services": [
+        {
+            "_id": "serv001",
+            "name": "Manicure Clásico",
+            "description": "Servicio completo de manicure que incluye limado, pulido, tratamiento de cutículas, masaje de manos con crema hidratante y aplicación de esmalte tradicional del color de tu elección.",
+            "price": 35000,
+            "urlImage": "https://i.pinimg.com/736x/8c/d6/9a/8cd69a1245fdee952e05db77cbf34952.jpg",
+            "userId": "user123"
+        },
+        {
+            "_id": "serv002",
+            "name": "Manicure Semi-permanente",
+            "description": "Manicure con esmalte de larga duración que puede durar hasta 3 semanas sin astillarse. Incluye preparación de uñas, aplicación de base, color y top coat, secado con lámpara UV/LED.",
+            "price": 65000,
+            "urlImage": "https://i.pinimg.com/736x/89/d5/f3/89d5f3acde9e7453cfe153e73760eb0d.jpg",
+            "userId": "user123"
+        },
+        {
+            "_id": "serv003",
+            "name": "Pedicure Spa",
+            "description": "Experiencia relajante que incluye hidromasaje de pies, exfoliación, tratamiento de callos y cutículas, masaje con aceites esenciales y aplicación de esmalte. Duración aproximada: 60 minutos.",
+            "price": 55000,
+            "urlImage": "https://i.pinimg.com/736x/78/26/f4/7826f476c7fa7262414b253900ef240a.jpg",
+            "userId": "user123"
+        },
+        {
+            "_id": "serv004",
+            "name": "Extensión de Uñas Acrílicas",
+            "description": "Aplicación de uñas acrílicas con la forma y longitud deseadas. Incluye preparación de uñas naturales, aplicación del acrílico, limado y forma, pulido y aplicación de esmalte o decoración básica.",
+            "price": 95000,
+            "urlImage": "https://i.pinimg.com/1200x/fb/ad/bd/fbadbd2fe0f4bcebde9de4d498398552.jpg",
+            "userId": "user123"
+        },
+        {
+            "_id": "serv005",
+            "name": "Nail Art Personalizado",
+            "description": "Diseño artístico personalizado en tus uñas. Incluye técnicas como degradados, estampados, cristales, líneas decorativas y más. El precio base es por 5 uñas, cada uña adicional tiene costo extra.",
+            "price": 45000,
+            "urlImage": "https://i.pinimg.com/736x/c9/63/30/c96330c54cdf9deee2e247017ab76bf5.jpg",
+            "userId": "user123"
+        },
+        {
+            "_id": "serv006",
+            "name": "Retiro de Esmalte Semi-permanente",
+            "description": "Retiro profesional y cuidadoso del esmalte semi-permanente o gel sin dañar la uña natural. Incluye tratamiento nutritivo posterior.",
+            "price": 25000,
+            "urlImage": "http://i.pinimg.com/1200x/5e/c0/39/5ec039e221bf18ff36d3056144e76875.jpg",
+            "userId": "user123"
+        }
+    ],
+    "talleres": [
+        {
+            "_id": "tall001",
+            "name": "Taller de Manicure Básico para Principiantes",
+            "description": "Aprende las técnicas fundamentales del manicure profesional. Este taller incluye teoría sobre tipos de uñas, herramientas básicas, técnicas de limado y forma, tratamiento de cutículas, y aplicación correcta del esmalte. Incluye kit de iniciación con herramientas básicas. Duración: 4 horas.",
+            "price": 180000,
+            "urlImage": "https://ideogram.ai/assets/image/balanced/response/CbdzCg7DRGiLDRihl5Tz8Q@2k",
+            "userId": "user123"
+        },
+        {
+            "_id": "tall002",
+            "name": "Curso de Aplicación de Esmalte Semi-permanente",
+            "description": "Domina la técnica de aplicación de esmalte gel y semi-permanente. Aprende preparación de uñas, aplicación en capas, curado con lámpara UV/LED, y retiro profesional sin daño. Incluye certificado y manual digital. Duración: 6 horas.",
+            "price": 350000,
+            "urlImage": "https://ideogram.ai/assets/image/balanced/response/D4eG-mXxTiu_4uBZ_z4RyA@2k",
+            "userId": "user123"
+        },
+        {
+            "_id": "tall003",
+            "name": "Taller de Nail Art Creativo",
+            "description": "Explora tu creatividad con técnicas avanzadas de diseño de uñas. Aprende degradados (ombré), estampados, uso de plantillas, aplicación de cristales y accesorios, líneas decorativas, y efectos especiales. Perfecto para quienes buscan diferenciarse. Duración: 8 horas (2 sesiones).",
+            "price": 420000,
+            "urlImage": "https://ideogram.ai/assets/image/balanced/response/RF4AtZeuRaCm9M_bB6T4fw@2k",
+            "userId": "user123"
+        },
+        {
+            "_id": "tall004",
+            "name": "Curso Profesional de Extensión de Uñas con Acrílico",
+            "description": "Aprende todo sobre extensiones de uñas acrílicas desde cero. Incluye preparación de uñas naturales, trabajo con tips y formas, mezcla y aplicación del acrílico, técnicas de esculpido, limado y forma, rellenos y mantenimiento. Incluye kit profesional completo. Duración: 12 horas (3 sesiones).",
+            "price": 650000,
+            "urlImage": "https://ideogram.ai/assets/image/balanced/response/JqG33kxcRYGXT26wQ1cgww@2k",
+            "userId": "user123"
+        }
+    ]
+}

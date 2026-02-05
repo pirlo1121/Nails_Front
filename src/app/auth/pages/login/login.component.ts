@@ -23,17 +23,12 @@ export class LoginComponent {
   ) {}
 
   login() {
-    console.log( this.loginForm.value );
-
     this.authService.login( this.loginForm.value ).subscribe( ( data: boolean ) => {
-      console.log( data );
-
       // Valida si no se logra autenticar el usuario
       if( ! data ) {
         this.classMessage = 'message error';
         this.message = 'Error de autenticacion';
       }
-
       // Oculta mensaje del formulario
       setTimeout( () => {
         this.classMessage = '';

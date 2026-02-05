@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { TalleresComponent } from './pages/talleres/talleres.component';
@@ -56,7 +57,8 @@ import { BannerTalleresComponent } from './components/banner-talleres/banner-tal
     AppRoutingModule,
     BrowserAnimationsModule,
     AuthModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],

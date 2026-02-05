@@ -9,62 +9,89 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
-  products!: Product[];
+  products: Product[] = [];
+  filteredProducts: Product[] = [];
   shoppingCart: any = [];
   carrito: any = [];
   total: any = 0;
   modal!: boolean;
   carr!: boolean;
   contador = 0;
+  searchTerm: string = '';
+  isLoading: boolean = true;
+  hasError: boolean = false;
 
 
   constructor(
     private productService: ProductService,
     private carritoService: CarritoService
-    )
-    {
-    console.log( 'hola');
+  ) {
+    console.log('hola');
 
   }
   ngOnInit(): void {
-    this.productService.getAllProducts().subscribe(data  => {
-      console.log(data);
+    this.isLoading = true;
+    this.productService.getAllProducts().subscribe({
+      next: (data) => {
+        console.log(data);
+        this.products = data.data;
+        this.filteredProducts = this.products;
+        this.isLoading = false;
+        this.hasError = false;
+      },
+      error: (error) => {
+        console.error('Error loading products:', error);
+        this.isLoading = false;
+        this.hasError = true;
+        // Set some mock data for demonstration when backend is not available
+        this.products = [];
+        this.filteredProducts = [];
+      }
+    });
 
-
-      this.products = data.data;
-
-      this.carritoService.$modal.subscribe(value =>{
-        this.modal = value
-      })
-      // this.carritoService.$modal.subscribe(data =>{
-      //   this.products = data
-      // })
-
+    this.carritoService.$modal.subscribe(value => {
+      this.modal = value
     })
   }
-  opencarrito(){
+
+  onSearchChange(searchTerm: string) {
+    this.searchTerm = searchTerm.toLowerCase();
+
+    if (!this.searchTerm) {
+      this.filteredProducts = this.products;
+    } else {
+      this.filteredProducts = this.products.filter(product =>
+        product.name.toLowerCase().includes(this.searchTerm) ||
+        (product.description && product.description.toLowerCase().includes(this.searchTerm)) ||
+        (product.category && product.category.toLowerCase().includes(this.searchTerm))
+      );
+    }
+  }
+
+  opencarrito() {
     this.modal = true;
   }
 
-  addProduct( product: any ) {
-    this.contador +=1;
+  addProduct(product: any) {
+    this.contador += 1;
 
-    if (this.shoppingCart.some((item:any) => item._id === product._id)) {
+    if (this.shoppingCart.some((item: any) => item._id === product._id)) {
       if (product.count < product.quantity) {
-        product.count +=1;
-      } else{
+        product.count += 1;
+      } else {
         alert(`solo puede agregar ${product.quantity} articulos al carrito`);
       }
 
     }
-    else{
+    else {
       product.count = 1
-      this.shoppingCart.push( product );
+      this.shoppingCart.push(product);
     }
 
 
-    localStorage.setItem( 'shoppingCart', JSON.stringify( this.shoppingCart ) );
-    console.log( 'lista en el carrito >>', this.shoppingCart );
+    localStorage.setItem('shoppingCart', JSON.stringify(this.shoppingCart));
+    console.log('lista en el carrito >>', this.shoppingCart);
   }
 
 }
+

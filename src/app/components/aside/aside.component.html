@@ -5,7 +5,21 @@
         <a routerLink="esmaltes" class="aside-link">Accesorios</a>
         <a routerLink="esmaltes" class="aside-link">Acrilicos</a>
     </ul>
-    <div class="serch">
-      <input type="text" id="search" placeholder="Search...">
+    <div class="search">
+      <div class="search-icon">🔍</div>
+      <input 
+        type="text" 
+        id="search" 
+        placeholder="Buscar productos..." 
+        [(ngModel)]="searchTerm"
+        (input)="onSearchChange($event)"
+        class="search-input">
+      <button 
+        *ngIf="searchTerm" 
+        class="clear-btn" 
+        (click)="clearSearch()"
+        aria-label="Limpiar búsqueda">
+        ✕
+      </button>
     </div>
 </aside>

@@ -1,168 +1,213 @@
-/* .card {
-  border: 1px dotted blue;
-  width: 100vw;
-} */
-
-*{
-  /* font-family: 'Times New Roman', Times, serif; */
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
-}
-.card-price {
-  display: block;
-  margin: 0.5rem;
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-.img{
+.img {
   overflow: hidden;
-  height: 255px;
-  width: 245px;
-}
-h3 {
-  color: #c81566 ;
-  margin: .2rem 0;
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-.card-info{
-  max-width: 245px;
+  height: 280px;
   width: 100%;
-  /* font-family: 'Courier New', Courier, monospace; */
-}
-.card-p {
-  color: black;
-  font-size: .7rem;
-  letter-spacing: 1px;
-  font-family: 'Times New Roman', Times, serif;
-
+  background: #f5f5f5;
+  position: relative;
 }
 
 .card-img {
-  height: 320px;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transform: scale(1);
-  transition: transform 0.6s;
+  transition: transform 0.5s ease, filter 0.3s ease;
 }
 
+.card-img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+.card-info {
+  width: 100%;
+  padding: 1.2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+h3 {
+  color: #c81566;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  min-height: 2.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-p {
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  margin: 0;
+  min-height: 2.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.card-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  background: linear-gradient(135deg, #c81566 0%, #d6337e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 .card-btn {
-  background-color: #c81566 ;
-  color: rgb(255, 255, 255);
+  background: linear-gradient(135deg, #c81566 0%, #d6337e 100%);
+  color: white;
   border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  font-size: .8rem;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(200, 21, 102, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-@media ( min-width: 568px ) {
-  .card-img {
-    height: 255px;
-    width: 245px;
-  }
-  .card {
-    width: 50%;
-  }
-  .card-footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
+.card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
 }
 
+.card-btn:hover::before {
+  left: 100%;
+}
 
 .card-btn:hover {
-  background-color: #a50c51 ;
-}
-.card-img:hover {
-  transform: scale(1.1);
+  background: linear-gradient(135deg, #a50c51 0%, #c81566 100%);
+  box-shadow: 0 4px 16px rgba(200, 21, 102, 0.4);
+  transform: translateY(-2px);
 }
 
-/* .card {
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.5s;
-    width: 100%;
-    max-width: 220px;
-    overflow: hidden;
-  }
+.card-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(200, 21, 102, 0.3);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
   .img {
-    max-width: 340px;
-    max-height: 230px;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+    height: 280px;
   }
 
-  .card-img{
-    transform: scale(1);
-    transition: transform 0.6s;
-    max-width: 340px;
-    max-height: 230px;
-    height: 100%;
-  }
-
-
-  .card-info {
-    padding: 7px;
-  }
-  h3{
-    margin: .2rem;
+  h3 {
+    font-size: 1.1rem;
   }
 
   .card-p {
-    color: #666;
-    font-size: .8rem;
-    letter-spacing: 2px;
-    margin: 5px 0;
+    font-size: 0.85rem;
+  }
+
+  .card-price {
+    font-size: 1.3rem;
+  }
+
+  .card-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .img {
+    height: 200px;
+  }
+
+  .card-info {
+    padding: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    min-height: 2.4rem;
+  }
+
+  .card-p {
+    font-size: 0.8rem;
+    min-height: 2.2rem;
+  }
+
+  .card-price {
+    font-size: 1.1rem;
+  }
+
+  .card-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    height: 150px;
+  }
+
+  .card-info {
+    padding: 0.8rem;
+    gap: 0.3rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    min-height: auto;
+  }
+
+  .card-p {
+    font-size: 0.7rem;
+    min-height: auto;
+    -webkit-line-clamp: 1;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
   }
 
   .card-price {
     font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-    margin: 0 .4rem;
+    text-align: center;
   }
 
   .card-btn {
-    background-color: rgb(255, 168, 158);
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: .8rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    width: 100%;
   }
-
-
-  @media (max-width: 700px) {
-    .card {
-      max-width: 120px;
-      max-height: 210px;
-      margin: 1rem;
-    }
-    .card-img{
-      max-height: 120px;
-    }
-    .card-info {
-      padding: 3px;
-    }
-    .card-p {
-      font-size: .4rem;
-      margin: 6px 2px;
-    }
-    .card-price {
-      font-size: .5rem;
-      margin: 0 .4rem;
-    }
-    .card-btn {
-      padding: 5px 10px;
-      font-size: .3rem
-    }
-  }
-
-
- */
+}
